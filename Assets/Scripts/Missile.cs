@@ -20,7 +20,7 @@ public class Missile : MonoBehaviour
         DamageComponent damageComponent = collision.collider.GetComponent<DamageComponent>();
         if (damageComponent != null)
         {
-            damageComponent.TakeDamage(Damage);
+            damageComponent.TakeDamage(Damage, gameObject);
         }
 
         Destroy(gameObject);

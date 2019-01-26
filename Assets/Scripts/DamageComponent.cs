@@ -21,7 +21,7 @@ public class DamageComponent : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, GameObject instigator)
     {
         if (m_CurrentHP <= 0)
         {
@@ -32,13 +32,19 @@ public class DamageComponent : MonoBehaviour
         if (m_CurrentHP <= 0)
         {
             m_CurrentHP = 0;
-            Die();
+            Die(instigator);
         }
     }
 
-    private void Die()
+    private void Die(GameObject instigator)
     {
         Tour tower = GetComponent<Tour>();
+        Mob instigatorMob = instigator.GetComponent<Mob>();
+        if (instigatorMob != null && tower != null)
+        {
+            instigatorMob.OnTowerKill(tower);
+        }
+
         if (tower != null)
         {
             tower.Die();

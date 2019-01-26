@@ -44,6 +44,14 @@ public class Mob : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void OnTowerKill(Tour tower)
+    {
+        if (Lane != null)
+        {
+            Lane.RemoveTower(tower);
+        }
+    }
+
     private void Moving(GameObject facingTower)
     {
         if (m_Graphics != null)
@@ -89,7 +97,7 @@ public class Mob : MonoBehaviour
                 DamageComponent damageComponent = facingTower.GetComponent<DamageComponent>();
                 if (damageComponent != null)
                 {
-                    damageComponent.TakeDamage(AttackDamage);
+                    damageComponent.TakeDamage(AttackDamage, gameObject);
                 }
             }
         }
@@ -115,6 +123,8 @@ public class Mob : MonoBehaviour
     public float AttackRange = 1.0f;
     public float AttackTime = 0.5f;
     public int AttackDamage = 2;
+
+    public Lane Lane { get; set; }
 
     private enum State
     {

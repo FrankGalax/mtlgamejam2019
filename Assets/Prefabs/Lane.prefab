@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6685392205230852210}
   - component: {fileID: 4038062353816052324}
-  m_Layer: 0
+  - component: {fileID: 1007303549538408207}
+  m_Layer: 11
   m_Name: Lane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,6 +60,20 @@ MonoBehaviour:
   - {fileID: 4738862780020561717}
   - {fileID: 8285572934706037676}
   - {fileID: 5024954195071851545}
+  MobPath: []
+--- !u!65 &1007303549538408207
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3324179593892387178}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14, y: 1, z: 2}
+  m_Center: {x: 6, y: 0, z: 0}
 --- !u!1 &3444793435296783778
 GameObject:
   m_ObjectHideFlags: 0
@@ -68,7 +83,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2769345493020772886}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TowerPlacement (1)
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -98,7 +113,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4738862780020561717}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TowerPlacement (4)
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -128,7 +143,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1547832430360652346}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TowerPlacement
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -158,7 +173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5024954195071851545}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TowerPlacement (6)
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -188,7 +203,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8285572934706037676}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TowerPlacement (5)
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -218,7 +233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7188655088751784724}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: MobSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -248,7 +263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1810768293891716469}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TowerPlacement (2)
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -278,7 +293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9042793303535289480}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TowerPlacement (3)
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
