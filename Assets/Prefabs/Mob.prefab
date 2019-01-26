@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4953038483875447437}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 2821286421645700942}
   - component: {fileID: 8736915608689434966}
   - component: {fileID: 2742208412720151253}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 974126452494294673}
   - component: {fileID: 643000102878872903}
   - component: {fileID: 8780690793953612093}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,8 @@ GameObject:
   - component: {fileID: 9205093641882071465}
   - component: {fileID: 7570347838653287917}
   - component: {fileID: 8684347065128940597}
-  m_Layer: 0
+  - component: {fileID: 7444583627045664791}
+  m_Layer: 8
   m_Name: Mob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,6 +234,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393b4ffcceb926b438d0f8a4b83d55f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WiggleSpeed: 5
+  WiggleAmplitude: 10
 --- !u!54 &9205093641882071465
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -275,3 +278,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 1
+--- !u!114 &7444583627045664791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7006753684621473286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a684d05aeef74684286b71476fd4902f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHP: 10
+  DisplayHealthBar: 1
