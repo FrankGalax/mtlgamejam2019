@@ -11,9 +11,14 @@ public class PathComponent : MonoBehaviour
         m_Rigidbody = GetComponent<Rigidbody>();
     }
 
+    void Start()
+    {
+        FollowPath = true;
+    }
+
     void FixedUpdate()
     {
-        if (m_Path.Count != 0)
+        if (FollowPath && m_Path.Count != 0)
         {
             Transform nextPoint = m_Path[0];
             Vector3 direction = nextPoint.position - transform.position;
@@ -55,6 +60,7 @@ public class PathComponent : MonoBehaviour
     public float Speed = 1.0f;
 
     public Action PathCompleteAction { private get; set; }
+    public bool FollowPath { private get; set; }
 
     private List<Transform> m_Path;
     private Rigidbody m_Rigidbody;

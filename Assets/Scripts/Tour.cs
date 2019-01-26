@@ -72,7 +72,7 @@ public class Tour : MonoBehaviour
 
     public void Die()
     {
-
+        Destroy(gameObject);
     }
 
     public virtual void DoUpdate(float deltaTime) { }
