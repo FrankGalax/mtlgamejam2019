@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7695433486918521473}
   - component: {fileID: 1305108531042640232}
   - component: {fileID: 7314704122419831311}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 8856706862009417862}
   - component: {fileID: 4941131588510783268}
   - component: {fileID: 2961667653202852438}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 2263643760405225334}
   - component: {fileID: 6555431562802204058}
   - component: {fileID: 9056841934652341550}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2493760385805695520}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
