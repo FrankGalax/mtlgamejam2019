@@ -31,6 +31,7 @@ public class DamageComponent : MonoBehaviour
         m_CurrentHP -= damage;
         if (m_CurrentHP <= 0)
         {
+            m_CurrentHP = 0;
             Die();
         }
     }

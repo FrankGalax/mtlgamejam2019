@@ -1,18 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class GameUI : MonoBehaviour
+public class GameUI : GameSingleton<GameUI>
 {
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        Transform canvas = transform.Find("Canvas");
+        m_EndGamePanel = canvas.Find("EndGamePanel");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ShowEndGamePanel()
     {
-        
+        m_EndGamePanel.gameObject.SetActive(true);
     }
+
+    public void PlayAgain()
+    {
+        SceneManager.LoadScene("main");
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    private Transform m_EndGamePanel;
 }
