@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class DamageComponent : MonoBehaviour
 {
@@ -45,16 +46,32 @@ public class DamageComponent : MonoBehaviour
             instigatorMob.OnTowerKill(tower);
         }
 
-        if (tower != null)
+        BoxCollider boxCollider = GetComponent<BoxCollider>();
+        if (boxCollider != null)
         {
-            tower.Die();
+            boxCollider.enabled = false;
         }
 
-        Mob mob = GetComponent<Mob>();
-        if (mob != null)
+        PathComponent pathComponent = GetComponent<PathComponent>();
+        if (pathComponent != null)
         {
-            mob.Die();
+            pathComponent.enabled = false;
         }
+
+        StartCoroutine(DeathAnim());
+    }
+
+    private IEnumerator DeathAnim()
+    {
+        float timer = 0.0f;
+        Quaternion target = Quaternion.Euler(-90, 0, 0);
+        while (timer < 1.0f)
+        {
+            yield return new WaitForFixedUpdate();
+            timer += Time.fixedDeltaTime;
+            transform.rotation = Quaternion.Slerp(Quaternion.identity, target, timer / 1.0f);
+        }
+        Destroy(gameObject);
     }
 
     public int MaxHP;

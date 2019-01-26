@@ -39,11 +39,6 @@ public class Mob : MonoBehaviour
         Game.Instance.LooseHouseHealth();
     }
 
-    public void Die()
-    {
-        Destroy(gameObject);
-    }
-
     public void OnTowerKill(Tour tower)
     {
         if (Lane != null)

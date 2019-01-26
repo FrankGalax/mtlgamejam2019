@@ -70,11 +70,6 @@ public class Tour : MonoBehaviour
         m_IsBeingBuild = false;
     }
 
-    public void Die()
-    {
-        Destroy(gameObject);
-    }
-
     public virtual void DoUpdate(float deltaTime) { }
 
     // Update is called once per frame
