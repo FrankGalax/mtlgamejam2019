@@ -45,6 +45,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a2671c9471d0d4ca4a91f6f5356375, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_pigsObj:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_PigsStartPath:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_Lanes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_TowersObjects:
+  - {fileID: 5563085917214755272, guid: 4b720ed2d07fda7429a58fa90d498e83, type: 3}
+  - {fileID: 5563085917214755272, guid: 5fcfaff6f7346c44f965080c63ddc09d, type: 3}
+  - {fileID: 5563085917214755272, guid: 0c47db9d0f5624147b170e05917e6bca, type: 3}
+  - {fileID: 5563085917214755272, guid: cf07ac2f7c32950488a597f1ce73259f, type: 3}
+  - {fileID: 5563085917214755272, guid: 495387730875af34d987de9ca761a912, type: 3}
+  - {fileID: 5563085917214755272, guid: 26235d9ed89247c48a376e9f6a6c3477, type: 3}
+  - {fileID: 5563085917214755272, guid: dff3994772c95974ca374fb93fb6e4a4, type: 3}
+  - {fileID: 5563085917214755272, guid: 0c9f9b9bed790534ba61221136496658, type: 3}
+  - {fileID: 5563085917214755272, guid: 8a7b25f5dcfcded468006b0555cf5a97, type: 3}
 --- !u!114 &5246932160834664931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,5 +97,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4224e6e55b0575a40900cd096bd33b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentTowerPrefab: {fileID: 5563085917214755272, guid: dff3994772c95974ca374fb93fb6e4a4,
-    type: 3}

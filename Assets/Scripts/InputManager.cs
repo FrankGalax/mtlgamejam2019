@@ -2,9 +2,19 @@
 
 public class InputManager : MonoBehaviour
 {
+    void Awake()
+    {
+        isReady = false;
+    }
+
+    public void IsReady()
+    {
+        isReady = true;
+    }
+
     void Update()
     {
-        if (Input.GetMouseButtonUp(0) && CurrentTowerPrefab != null)
+        if (Input.GetMouseButtonUp(0) && isReady)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Debug.DrawLine(ray.origin, ray.origin + ray.direction * 10.0f, Color.white, 1.0f);
@@ -15,11 +25,11 @@ public class InputManager : MonoBehaviour
                 Lane lane = hit.collider.GetComponent<Lane>();
                 if (lane != null)
                 {
-                    lane.AddTower(CurrentTowerPrefab);
+                    Game.Instance.StartActionOnLane(lane);
                 }
             }
         }
     }
 
-    public GameObject CurrentTowerPrefab;
+    private bool isReady;
 }

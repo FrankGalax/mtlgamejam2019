@@ -14,7 +14,7 @@ public class Pig : MonoBehaviour
     private bool m_isReturningToHome;
 
     private GameObject m_towerToBuild;
-    private Transform m_buildingPoint;
+    private Lane m_buildingLane;
     private float m_buildTime;
     private List<Transform> m_returnPath;
 
@@ -35,7 +35,7 @@ public class Pig : MonoBehaviour
         m_idleRotation = gameObject.transform.rotation;
     }
 
-    public void UsePig(List<Transform> path, GameObject tower, Transform buildingPoint)
+    public void UsePig(List<Transform> path, GameObject tower, Lane buildingLane)
     {
         if(m_IsBuilding || m_isReturningToHome)
         {
@@ -43,7 +43,7 @@ public class Pig : MonoBehaviour
         }
 
         m_towerToBuild = tower;
-        m_buildingPoint = buildingPoint;
+        m_buildingLane = buildingLane;
 
         // c'est wak un peu, j'enleve les postiions de fin pis de depart parce que le path finding marche
         // pas vu quon est deja sur les positions
@@ -136,10 +136,7 @@ public class Pig : MonoBehaviour
             if(m_buildTime <= 0)
             {
                 // pour linstant spawn jsute a la fin 
-                GameObject tower = Instantiate(m_towerToBuild, m_buildingPoint.position, Quaternion.identity);
-                Tour tourComponent = tower.GetComponent<Tour>();
-
-                tourComponent.FinishBuilding();
+                m_buildingLane.AddTower(m_towerToBuild);
 
                 m_IsBuilding = false;
                 ReturnToHome();

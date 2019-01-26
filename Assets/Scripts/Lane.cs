@@ -9,6 +9,7 @@ public class Lane : MonoBehaviour
     {
         m_MobSpawnPoint = transform.Find("MobSpawnPoint");
         m_Towers = new List<Tour>();
+        m_IsOccupied = false;
     }
 
     void Update()
@@ -71,6 +72,11 @@ public class Lane : MonoBehaviour
         }
     }
 
+    public void SetIsOccupied(bool isOccupied)
+    {
+        m_IsOccupied = isOccupied;
+    }
+
     public void RemoveTower(Tour tower)
     {
         m_Towers.Remove(tower);
@@ -84,7 +90,9 @@ public class Lane : MonoBehaviour
 
     public List<Transform> TowerPlacements;
     public List<Transform> MobPath;
+    public List<Transform> PigPath;
 
     private Transform m_MobSpawnPoint;
     private List<Tour> m_Towers;
+    private bool m_IsOccupied;
 }

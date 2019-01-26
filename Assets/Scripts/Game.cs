@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Game : GameSingleton<Game>
 {
-    public GameObject[] m_pigs;
+    public GameObject[] m_pigsObj;
     public List<Transform> m_PigsStartPath;
     public List<GameObject> m_Lanes;
 
     public List<GameObject> m_TowersObjects;
     private Towers m_towers;
+    private List<Pig> m_pigs;
 
     private void Awake()
     {
@@ -57,6 +58,19 @@ public class Game : GameSingleton<Game>
             m_towers.towers.Add(woodTowers);
             m_towers.towers.Add(rockTowers);
         }
+
+        if(m_pigsObj.Length > 0)
+        {
+            m_pigs = new List<Pig>();
+            foreach (GameObject pigObj in m_pigsObj)
+            {
+                Pig pigComponent = pigObj.GetComponent<Pig>();
+                if(pigComponent)
+                {
+                    m_pigs.Add(pigComponent);
+                }
+            }
+        }
     }
 
     public int HouseHealth { get; set; }
@@ -65,11 +79,7 @@ public class Game : GameSingleton<Game>
     {
         HouseHealth = 3;
 
-        /*if (m_pigs.Length <= 0)
-        {
-            return;
-        }
-        Pig pigComponent = m_pigs[0].GetComponent<Pig>();
+        /*Pig pigComponent = m_pigs[0].GetComponent<Pig>();
         Lane laneComponent = m_Lanes[0].GetComponent<Lane>();
 
         if (laneComponent != null)
@@ -84,11 +94,45 @@ public class Game : GameSingleton<Game>
 
             if (pigComponent != null)
             {
-                pigComponent.UsePig(pigPath, m_towers.GetTowerObject(RessourceType.RessourceType_Straw, TourType.TourType_AOE), laneComponent.TowerPlacements[0]);
+                pigComponent.UsePig(pigPath, m_towers.GetTowerObject(RessourceType.RessourceType_Straw, TourType.TourType_AOE), laneComponent);
             }
         }*/
     }
 
+    public void StartActionOnLane(Lane laneComponent)
+    {
+        if(!laneComponent)
+        {
+            return;
+        }
+
+        List<Transform> pigPath = new List<Transform>();
+        foreach (Transform pathPoint in m_PigsStartPath)
+        {
+            pigPath.Add(pathPoint);
+        }
+
+        pigPath.Add(laneComponent.MobPath[0]);
+
+        Pig pigComponent = GetPigComponentByType(GameUI.Instance.GetCurrentPig());
+        if(pigComponent)
+        {
+            pigComponent.UsePig(pigPath, m_towers.GetTowerObject(GameUI.Instance.GetCurrentTourRessource(), GameUI.Instance.GetCurrentTourType()), laneComponent);
+        }
+    }
+
+    Pig GetPigComponentByType(RessourceType pigType)
+    {
+        foreach(Pig pig in m_pigs)
+        {
+            if(pig.m_Ressource == pigType)
+            {
+                return pig;
+            }
+        }
+
+        return null;
+    }
     public void LooseHouseHealth()
     {
         HouseHealth -= 1;
