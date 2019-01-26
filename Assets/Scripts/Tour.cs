@@ -9,10 +9,50 @@ public enum TourType
     TourType_Static
 }
 
+public struct TowerData
+{
+    public TourType tourType;
+    public GameObject gameObject;
+}
+
+public struct TowerDataLists
+{
+    public RessourceType ressourceType;
+    public List<TowerData> towerData;
+}
+
+public struct Towers
+{
+    public List<TowerDataLists> towers;
+
+    public GameObject GetTowerObject(RessourceType resssource, TourType tourType)
+    {
+        if(towers.Count <= 0)
+        {
+            return null;
+        }
+
+        foreach(TowerDataLists towerList in towers)
+        {
+            if(towerList.ressourceType == resssource)
+            {
+                foreach(TowerData tower in towerList.towerData)
+                {
+                    if(tower.tourType == tourType)
+                    {
+                        return tower.gameObject;
+                    }
+                }
+            }
+        }
+        return null;
+    }
+}
+
 public class Tour : MonoBehaviour
 {
     public TourType m_TourType;
-    public Ressource m_Ressource;
+    public RessourceType m_RessourceType;
     public float m_MinBuildingTime;
 
     private bool m_IsBeingBuild;
@@ -24,7 +64,7 @@ public class Tour : MonoBehaviour
         m_IsBeingBuild = true;
     }
 
-    void FinishBuilding()
+    public void FinishBuilding()
     {
         m_IsBuilded = true;
         m_IsBeingBuild = false;
