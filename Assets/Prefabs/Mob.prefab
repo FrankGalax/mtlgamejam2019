@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 9205093641882071465}
   - component: {fileID: 7570347838653287917}
   - component: {fileID: 8684347065128940597}
+  - component: {fileID: 7444583627045664791}
   m_Layer: 0
   m_Name: Mob
   m_TagString: Untagged
@@ -277,3 +278,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 1
+--- !u!114 &7444583627045664791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7006753684621473286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a684d05aeef74684286b71476fd4902f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHP: 10

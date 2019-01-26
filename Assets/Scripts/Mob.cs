@@ -26,6 +26,11 @@ public class Mob : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void Die()
+    {
+
+    }
+
     public float WiggleSpeed;
     public float WiggleAmplitude;
 

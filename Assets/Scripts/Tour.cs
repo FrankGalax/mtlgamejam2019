@@ -30,13 +30,9 @@ public class Tour : MonoBehaviour
         m_IsBeingBuild = false;
     }
 
-    public void Attack(uint damage)
+    public void Die()
     {
-        uint hp = m_Ressource.Attack(damage);
-        if(hp <= 0) // pour l'instant
-        {
-            Destroy(gameObject);
-        }
+
     }
 
     public virtual void DoUpdate(float deltaTime) { }
