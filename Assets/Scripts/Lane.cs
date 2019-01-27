@@ -107,7 +107,7 @@ public class Lane : MonoBehaviour
         bool foundTower = false;
         foreach (Tour towerInLane in m_Towers)
         {
-            if (foundTower && towerInLane.m_RessourceType == RessourceType.RessourceType_Rock)
+            if (foundTower && towerInLane.m_RessourceType == RessourceType.RessourceType_Rock && towerInLane.m_TourType == TourType.TourType_Static)
             {
                 return true;
             }
