@@ -88,7 +88,8 @@ GameObject:
   - component: {fileID: 8856706862009417862}
   - component: {fileID: 4941131588510783268}
   - component: {fileID: 2961667653202852438}
-  - component: {fileID: 821692829003085971}
+  - component: {fileID: 5548245702982250377}
+  - component: {fileID: 1247892080438735518}
   m_Layer: 10
   m_Name: HayBale
   m_TagString: Untagged
@@ -140,7 +141,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 1, z: 1}
   m_Center: {x: 0, y: 0.75, z: 0}
---- !u!114 &821692829003085971
+--- !u!114 &5548245702982250377
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,14 +150,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 5563085917214755272}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66288b6a1830ee941ab2ceb7343df8d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 213a2ef4e0b126a4ea2403b24f881e18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_TourType: 2
   m_RessourceType: 0
   m_MinBuildingTime: 0
-  m_SpeedReduction: 0
-  m_DamageOverTime: 0
+--- !u!114 &1247892080438735518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5563085917214755272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a684d05aeef74684286b71476fd4902f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHP: 10
+  DisplayHealthBar: 1
 --- !u!1 &8201889252693325987
 GameObject:
   m_ObjectHideFlags: 0
