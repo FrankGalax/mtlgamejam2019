@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
 {
     public RectTransform m_curtainL;
     public RectTransform m_curtainR;
+    public RectTransform m_Top;
     public GameObject m_background;
     public GameObject m_titleelement;
 
@@ -20,11 +21,15 @@ public class MainMenu : MonoBehaviour
     {
         m_playPressed = false;
         m_sceneLoaded = false;
-        m_animFactor = (m_curtainR.rect.width - 50) /m_AnimTime;
     }
 
     public void OnPlayPressed()
     {
+        float rectFact = (Screen.width) /855f;
+
+        Debug.Log(" " + rectFact);
+        m_animFactor = (rectFact * (m_curtainR.rect.width) + 10) / m_AnimTime;
+
         m_playPressed = true;
     }
 
@@ -39,6 +44,13 @@ public class MainMenu : MonoBehaviour
             {
                 m_background.SetActive(false);
                 m_titleelement.SetActive(false);
+            }
+
+            if(m_AnimTime < 1)
+            {
+                Vector3 top = new Vector3(m_Top.position.x, m_Top.position.y, m_Top.position.z);
+                top.y = top.y + (500f * Time.deltaTime);
+                m_Top.SetPositionAndRotation(top, m_Top.rotation);
             }
 
             if(m_AnimTime < 5 && !m_sceneLoaded)
@@ -60,7 +72,6 @@ public class MainMenu : MonoBehaviour
                 Vector3 newPositionR = new Vector3(m_curtainR.position.x, m_curtainR.position.y, m_curtainR.position.z);
                 newPositionR.x = newPositionR.x + (m_animFactor * Time.deltaTime); 
                 m_curtainR.SetPositionAndRotation(newPositionR, m_curtainR.rotation);
-
             }
         }
     }
