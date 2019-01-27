@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TourType: 0
   m_RessourceType: 1
-  m_MinBuildingTime: 0
+  m_MinBuildingTime: 3
 --- !u!1 &8201889252693325987
 GameObject:
   m_ObjectHideFlags: 0

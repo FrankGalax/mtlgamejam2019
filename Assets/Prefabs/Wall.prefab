@@ -155,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TourType: 2
   m_RessourceType: 2
-  m_MinBuildingTime: 0
+  m_MinBuildingTime: 10
 --- !u!114 &7556911524715443757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHP: 20
   DisplayHealthBar: 1
+  HealthBarOffset: 1.75
 --- !u!1 &8201889252693325987
 GameObject:
   m_ObjectHideFlags: 0
