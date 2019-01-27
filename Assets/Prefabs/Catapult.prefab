@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TourType: 1
   m_RessourceType: 2
-  m_MinBuildingTime: 0
+  m_MinBuildingTime: 10
   MissilePrefab: {fileID: 7159142366259680510, guid: 8a2af12cb9f9cee42964655cf0fc1ea0,
     type: 3}
   FireTime: 3

@@ -13,7 +13,7 @@ public class DamageComponent : MonoBehaviour
         if (DisplayHealthBar)
         {
             float ratio = (float)m_CurrentHP / (float)MaxHP;
-            Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position + Vector3.up);
+            Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position + Vector3.up * HealthBarOffset);
             screenPosition.y = Screen.height - screenPosition.y;
             float sizeX = ratio * 50.0f;
             screenPosition.x -= sizeX / 2.0f;
@@ -76,6 +76,7 @@ public class DamageComponent : MonoBehaviour
 
     public int MaxHP;
     public bool DisplayHealthBar;
+    public float HealthBarOffset = 1.75f;
 
     private int m_CurrentHP;
 }

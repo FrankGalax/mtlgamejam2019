@@ -155,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TourType: 0
   m_RessourceType: 0
-  m_MinBuildingTime: 2
+  m_MinBuildingTime: 1
   m_SpeedReduction: 0
   m_DamageOverTime: 2
 --- !u!114 &8661053550685373488

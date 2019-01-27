@@ -112,13 +112,13 @@ public class Wolf : MonoBehaviour
 
     public float WiggleSpeed;
     public float WiggleAmplitude;
-    public float MinWaitTime = 5;
-    public float MaxWaitTime = 10;
     public float BlowTime = 5;
     public Transform OutPoint;
     public Transform InPoint;
     public GameObject WolfBreathPrefab;
     public float SpawnBreathOffset = -2.0f;
+    public float MinWaitTime { get; set; }
+    public float MaxWaitTime { get; set; }
 
     private enum State
     {
