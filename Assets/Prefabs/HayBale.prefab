@@ -302,9 +302,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a684d05aeef74684286b71476fd4902f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHP: 10
+  MaxHP: 30
   DisplayHealthBar: 1
   HealthBarOffset: 1.75
+  ResistRock: 0
 --- !u!1 &8959459597517466555
 GameObject:
   m_ObjectHideFlags: 0
