@@ -47,10 +47,13 @@ public class Pig : MonoBehaviour
 
         // c'est wak un peu, j'enleve les postiions de fin pis de depart parce que le path finding marche
         // pas vu quon est deja sur les positions
-        for(int i = path.Count - 1; i > 0; --i)
+        m_returnPath.Clear();
+        for (int i = path.Count - 1; i > 0; --i)
         {
             m_returnPath.Add(path[i - 1]);
         }
+
+        Debug.Log("pathlong" + m_returnPath.Count);
 
         gameObject.transform.SetPositionAndRotation(path[0].position, path[0].rotation);
         path.RemoveAt(0);
@@ -64,12 +67,29 @@ public class Pig : MonoBehaviour
 
         if (pathComponent != null)
         {
+            GameUI.Instance.DeactivePig(GetNameByType());
+            pathComponent.ClearPath();
             foreach (Transform pathPoint in path)
             {
                 pathComponent.AddPathPoint(pathPoint);
             }
 
             pathComponent.PathCompleteAction = () => OnPathComplete();
+        }
+    }
+
+    string GetNameByType()
+    {
+        switch(m_Ressource)
+        {
+            case RessourceType.RessourceType_Rock:
+                return "Rock";
+            case RessourceType.RessourceType_Straw:
+                return "Straw";
+            case RessourceType.RessourceType_Wood:
+                return "Wood";
+            default:
+                return "";
         }
     }
 
@@ -81,6 +101,8 @@ public class Pig : MonoBehaviour
         }
         else
         {
+            GameUI.Instance.ActivePig(GetNameByType());
+
             gameObject.transform.SetPositionAndRotation(m_idlePosition, m_idleRotation);
             m_isReturningToHome = false;
         }

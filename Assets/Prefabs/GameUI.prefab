@@ -34,10 +34,10 @@ RectTransform:
   m_Father: {fileID: 1021087855}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 48.220005, y: -20.600006}
-  m_SizeDelta: {x: 46.56, y: 30}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -73.67996, y: -0.20000458}
+  m_SizeDelta: {x: 46.559998, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &81363793
 CanvasRenderer:
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 998109074}
+      - m_Target: {fileID: 7150139958071045321}
         m_MethodName: TourTypeSelection
         m_Mode: 5
         m_Arguments:
@@ -163,10 +163,10 @@ RectTransform:
   m_Father: {fileID: 1304106033}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -44.9, y: -20.6}
-  m_SizeDelta: {x: 46.56, y: 30}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -167.50003, y: 1.0999941}
+  m_SizeDelta: {x: 46.559998, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &182283672
 CanvasRenderer:
@@ -226,8 +226,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.96814007, g: 0.9716981, b: 0.49043253, a: 1}
+    m_PressedColor: {r: 0.9056604, g: 0.88458884, b: 0.004271993, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 998109074}
+      - m_Target: {fileID: 7150139958071045321}
         m_MethodName: TourRessourceSelection
         m_Mode: 5
         m_Arguments:
@@ -268,7 +268,6 @@ GameObject:
   m_Component:
   - component: {fileID: 361944801}
   - component: {fileID: 361944803}
-  - component: {fileID: 361944802}
   m_Layer: 0
   m_Name: PigSelection
   m_TagString: Untagged
@@ -283,20 +282,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361944800}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 775636095}
   - {fileID: 1478021904}
   - {fileID: 772778688}
-  m_Father: {fileID: 8916154143372785201}
-  m_RootOrder: 4
+  m_Father: {fileID: 8900440182635332902}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 234.3, y: 78.92}
+  m_AnchoredPosition: {x: -107.630005, y: -12.930009}
+  m_SizeDelta: {x: 231.35, y: 57.27}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &361944803
 CanvasRenderer:
@@ -306,35 +305,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361944800}
   m_CullTransparentMesh: 0
---- !u!114 &361944802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 361944800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
 --- !u!1 &555259053
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,10 +339,10 @@ RectTransform:
   m_Father: {fileID: 1304106033}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 48.220005, y: -20.600006}
-  m_SizeDelta: {x: 46.56, y: 30}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -74.38001, y: 1.0999902}
+  m_SizeDelta: {x: 46.559998, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &555259057
 CanvasRenderer:
@@ -432,8 +402,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.6132076, g: 0.6103151, b: 0.6103151, a: 1}
+    m_PressedColor: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -451,7 +421,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 998109074}
+      - m_Target: {fileID: 7150139958071045321}
         m_MethodName: TourRessourceSelection
         m_Mode: 5
         m_Arguments:
@@ -577,10 +547,10 @@ RectTransform:
   m_Father: {fileID: 1304106033}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 1.6599975, y: -20.600006}
-  m_SizeDelta: {x: 46.56, y: 30}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -120.94001, y: 1.0999902}
+  m_SizeDelta: {x: 46.559998, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &652106024
 CanvasRenderer:
@@ -640,8 +610,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.6509434, g: 0.59613806, b: 0.49434853, a: 1}
+    m_PressedColor: {r: 0.4245283, g: 0.38973388, b: 0.29837132, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -659,7 +629,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 998109074}
+      - m_Target: {fileID: 7150139958071045321}
         m_MethodName: TourRessourceSelection
         m_Mode: 5
         m_Arguments:
@@ -764,7 +734,7 @@ GameObject:
   - component: {fileID: 772778690}
   - component: {fileID: 772778689}
   m_Layer: 0
-  m_Name: PigRock
+  m_Name: Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -785,10 +755,10 @@ RectTransform:
   m_Father: {fileID: 361944801}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 155.3, y: 20}
-  m_SizeDelta: {x: 70, y: 29.7}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -92.29997, y: -11.199982}
+  m_SizeDelta: {x: 54.5, y: 29.7}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &772778691
 CanvasRenderer:
@@ -847,9 +817,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_NormalColor: {r: 0.9150943, g: 0.85898006, b: 0.85898006, a: 1}
+    m_HighlightedColor: {r: 0.6509434, g: 0.62944996, b: 0.62944996, a: 1}
+    m_PressedColor: {r: 0.46226418, g: 0.41647387, b: 0.41647387, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -867,7 +837,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 998109074}
+      - m_Target: {fileID: 7150139958071045321}
         m_MethodName: PigSelection
         m_Mode: 5
         m_Arguments:
@@ -893,7 +863,7 @@ GameObject:
   - component: {fileID: 775636097}
   - component: {fileID: 775636096}
   m_Layer: 0
-  m_Name: PigStraw
+  m_Name: Straw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -914,10 +884,10 @@ RectTransform:
   m_Father: {fileID: 361944801}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 10, y: 20}
-  m_SizeDelta: {x: 70, y: 29.7}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -205.59998, y: -11.200005}
+  m_SizeDelta: {x: 54.5, y: 29.7}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &775636098
 CanvasRenderer:
@@ -976,9 +946,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_NormalColor: {r: 0.9825953, g: 0.990566, b: 0.85506403, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.9762972, b: 0.6839622, a: 1}
+    m_PressedColor: {r: 1, g: 0.99317586, b: 0.495283, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -996,7 +966,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 998109074}
+      - m_Target: {fileID: 7150139958071045321}
         m_MethodName: PigSelection
         m_Mode: 5
         m_Arguments:
@@ -1019,7 +989,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1021087855}
   - component: {fileID: 1021087854}
-  - component: {fileID: 1021087853}
   m_Layer: 0
   m_Name: TourSelection
   m_TagString: Untagged
@@ -1034,21 +1003,21 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1021087852}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1339954673}
   - {fileID: 1559591910}
   - {fileID: 81363790}
-  m_Father: {fileID: 8916154143372785201}
-  m_RootOrder: 3
+  m_Father: {fileID: 8900440182635332902}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -307.06, y: -169.92}
-  m_SizeDelta: {x: -626.42, y: -439.23}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -110.1, y: -9.9}
+  m_SizeDelta: {x: 133.18, y: -42.73}
+  m_Pivot: {x: 0, y: 0}
 --- !u!222 &1021087854
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1057,35 +1026,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1021087852}
   m_CullTransparentMesh: 0
---- !u!114 &1021087853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1021087852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
 --- !u!1 &1136202692
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,7 +1262,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Wood
+  m_Text: Attack
 --- !u!1 &1304106032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,7 +1273,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1304106033}
   - component: {fileID: 1304106035}
-  - component: {fileID: 1304106034}
   m_Layer: 0
   m_Name: RessourceSelection
   m_TagString: Untagged
@@ -1348,20 +1287,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304106032}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 182283669}
   - {fileID: 652106021}
   - {fileID: 555259054}
-  m_Father: {fileID: 8916154143372785201}
-  m_RootOrder: 2
+  m_Father: {fileID: 8900440182635332902}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -307.06, y: -169.92}
-  m_SizeDelta: {x: -626.42, y: -439.23}
+  m_AnchoredPosition: {x: -43.51001, y: -31.270006}
+  m_SizeDelta: {x: 133.18, y: -48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1304106035
 CanvasRenderer:
@@ -1371,35 +1310,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304106032}
   m_CullTransparentMesh: 0
---- !u!114 &1304106034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1304106032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
 --- !u!1 &1339954672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1434,10 +1344,10 @@ RectTransform:
   m_Father: {fileID: 1021087855}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -44.9, y: -20.6}
-  m_SizeDelta: {x: 46.56, y: 30}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -166.8, y: -0.20000076}
+  m_SizeDelta: {x: 46.559998, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1339954676
 CanvasRenderer:
@@ -1497,8 +1407,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 1}
+    m_PressedColor: {r: 0.9528302, g: 0.9505055, b: 0.885413, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1516,7 +1426,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 998109074}
+      - m_Target: {fileID: 7150139958071045321}
         m_MethodName: TourTypeSelection
         m_Mode: 5
         m_Arguments:
@@ -1542,7 +1452,7 @@ GameObject:
   - component: {fileID: 1478021906}
   - component: {fileID: 1478021905}
   m_Layer: 0
-  m_Name: PigWood
+  m_Name: Wood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1563,10 +1473,10 @@ RectTransform:
   m_Father: {fileID: 361944801}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 82.15, y: 20}
-  m_SizeDelta: {x: 70, y: 29.7}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -149.39996, y: -11.199982}
+  m_SizeDelta: {x: 54.5, y: 29.7}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &1478021907
 CanvasRenderer:
@@ -1625,9 +1535,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_NormalColor: {r: 0.8207547, g: 0.7978376, b: 0.7549395, a: 1}
+    m_HighlightedColor: {r: 0.5849056, g: 0.50816023, b: 0.37798145, a: 1}
+    m_PressedColor: {r: 0.509434, g: 0.4115112, b: 0.24750803, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1645,7 +1555,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 998109074}
+      - m_Target: {fileID: 7150139958071045321}
         m_MethodName: PigSelection
         m_Mode: 5
         m_Arguments:
@@ -1771,10 +1681,10 @@ RectTransform:
   m_Father: {fileID: 1021087855}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 1.6599975, y: -20.600006}
-  m_SizeDelta: {x: 46.56, y: 30}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -120.24, y: -0.20000458}
+  m_SizeDelta: {x: 46.559998, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1559591913
 CanvasRenderer:
@@ -1834,7 +1744,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.9339623, g: 0.8502581, b: 0.8502581, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1853,7 +1763,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 998109074}
+      - m_Target: {fileID: 7150139958071045321}
         m_MethodName: TourTypeSelection
         m_Mode: 5
         m_Arguments:
@@ -2261,6 +2171,60 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: End game text
+--- !u!1 &841287210083309564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8900440182635332902}
+  - component: {fileID: 7150139958071045321}
+  m_Layer: 0
+  m_Name: Selection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8900440182635332902
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841287210083309564}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1304106033}
+  - {fileID: 1021087855}
+  - {fileID: 361944801}
+  m_Father: {fileID: 8916154143372785201}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &7150139958071045321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841287210083309564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 015f9bfac4ee86e4ebfedd270084f2c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RessourcePanel: {fileID: 1304106032}
+  m_tourTypePanel: {fileID: 1021087852}
+  m_pigsSelectionPanel: {fileID: 361944800}
 --- !u!1 &2054724383089338773
 GameObject:
   m_ObjectHideFlags: 0
@@ -2628,9 +2592,7 @@ RectTransform:
   m_Children:
   - {fileID: 8085793992006263575}
   - {fileID: 6489292979025149406}
-  - {fileID: 1304106033}
-  - {fileID: 1021087855}
-  - {fileID: 361944801}
+  - {fileID: 8900440182635332902}
   m_Father: {fileID: 5474180777748409987}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2867,7 +2829,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5474180777748409987}
   - component: {fileID: 2787247830554740372}
-  - component: {fileID: 998109074}
   m_Layer: 0
   m_Name: GameUI
   m_TagString: Untagged
@@ -2902,18 +2863,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2737c1cbd6f64345be2452d2c6f7df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &998109074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9188893476364470650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 015f9bfac4ee86e4ebfedd270084f2c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RessourcePanel: {fileID: 1304106032}
-  m_tourTypePanel: {fileID: 1021087852}
-  m_pigsSelectionPanel: {fileID: 361944800}
