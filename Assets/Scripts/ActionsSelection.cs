@@ -39,6 +39,28 @@ public class ActionsSelection : MonoBehaviour
         gameObject.GetComponent<RectTransform>().SetPositionAndRotation(inputPosition, rotation);
         m_pigsSelectionPanel.SetActive(true);
     }
+
+    public void BackChoice()
+    {
+        if(m_pigsSelectionPanel.activeSelf)
+        {
+            m_pigsSelectionPanel.SetActive(false);
+
+            InputManager inputManager = FindObjectOfType<InputManager>();
+            inputManager.IsReady();
+        }
+        else if(m_RessourcePanel.activeSelf)
+        {
+            m_RessourcePanel.SetActive(false);
+            m_pigsSelectionPanel.SetActive(true);
+        }
+        else if(m_tourTypePanel.activeSelf)
+        {
+            m_tourTypePanel.SetActive(false);
+            m_RessourcePanel.SetActive(true);
+        }
+    }
+
     public void PigSelection(string name)
     {
         switch(name)

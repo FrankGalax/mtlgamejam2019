@@ -37,6 +37,12 @@ public class GameUI : GameSingleton<GameUI>
         m_actionsSelection.Active(position, laneComponent);
     }
 
+    public void BackChoice()
+    {
+        Debug.Log(" bakc");
+        m_actionsSelection.BackChoice();
+    }
+
     public void Quit()
     {
         Application.Quit();

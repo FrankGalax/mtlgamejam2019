@@ -32,7 +32,12 @@ public class InputManager : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonUp(1) && DebugTower != null)
+        if (Input.GetMouseButtonUp(1) && !isReady)
+        {
+            GameUI.Instance.BackChoice();
+        }
+
+        if (Input.GetMouseButtonUp(2) && DebugTower != null)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
