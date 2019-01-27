@@ -48,6 +48,7 @@ public class Wolf : MonoBehaviour
                 pathComponent.PathCompleteAction = () =>
                 {
                     m_State = State.Blowing;
+                    Instantiate(WolfBreathPrefab, new Vector3(transform.position.x + SpawnBreathOffset, 2.75f, transform.position.z), Quaternion.identity);
                     pathComponent.FollowPath = false;
                     m_Timer = BlowTime;
                 };
@@ -116,6 +117,8 @@ public class Wolf : MonoBehaviour
     public float BlowTime = 5;
     public Transform OutPoint;
     public Transform InPoint;
+    public GameObject WolfBreathPrefab;
+    public float SpawnBreathOffset = -2.0f;
 
     private enum State
     {

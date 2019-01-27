@@ -82,6 +82,8 @@ MonoBehaviour:
   BlowTime: 5
   OutPoint: {fileID: 0}
   InPoint: {fileID: 0}
+  WolfBreathPrefab: {fileID: 3417548522068163686, guid: 6d2c467f1283c46448870694cb5e99dd,
+    type: 3}
 --- !u!1 &5488437877951353615
 GameObject:
   m_ObjectHideFlags: 0
