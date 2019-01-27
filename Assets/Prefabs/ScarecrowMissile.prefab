@@ -80,7 +80,7 @@ MonoBehaviour:
   Speed: 3
   Damage: 1
   PiercingCount: 1
-  UseCollisions: 1
+  UseCollisions: 0
   DamageType: 0
 --- !u!54 &2331826925897378864
 Rigidbody:

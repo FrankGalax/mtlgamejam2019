@@ -121,6 +121,10 @@ public class Pig : MonoBehaviour
             {
                 m_IsBuilding = true;
                 m_buildTime = m_BuildingSpeedModifier * tourComponent.m_MinBuildingTime;
+                if (m_Ressource == tourComponent.m_RessourceType)
+                {
+                    m_buildTime /= 2.0f;
+                }
                 
                 m_buildingLane.AddTower(m_towerToBuild, m_buildTime);
 

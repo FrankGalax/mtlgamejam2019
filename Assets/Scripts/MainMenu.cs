@@ -61,6 +61,7 @@ public class MainMenu : MonoBehaviour
 
             if (m_AnimTime <= 0)
             {
+                SceneManager.LoadScene("main");
                 m_playPressed = false;
             }
             else
