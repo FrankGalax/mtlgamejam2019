@@ -52,12 +52,12 @@ public class ActionsSelection : MonoBehaviour
         else if(m_RessourcePanel.activeSelf)
         {
             m_RessourcePanel.SetActive(false);
-            m_pigsSelectionPanel.SetActive(true);
+            m_tourTypePanel.SetActive(true);
         }
         else if(m_tourTypePanel.activeSelf)
         {
             m_tourTypePanel.SetActive(false);
-            m_RessourcePanel.SetActive(true);
+            m_pigsSelectionPanel.SetActive(true);
         }
     }
 
@@ -77,7 +77,7 @@ public class ActionsSelection : MonoBehaviour
         }
 
         m_pigsSelectionPanel.SetActive(false);
-        m_RessourcePanel.SetActive(true);
+        m_tourTypePanel.SetActive(true);
     }
 
     public void TourRessourceSelection(string name)
@@ -94,8 +94,11 @@ public class ActionsSelection : MonoBehaviour
                 m_TourRessource = RessourceType.RessourceType_Rock;
                 break;
         }
+
         m_RessourcePanel.SetActive(false);
-        m_tourTypePanel.SetActive(true);
+
+        m_ActionIsReady = false;
+        Game.Instance.StartActionOnLane(m_laneOwner, m_TourRessource, m_PigType, m_TourType);
     }
 
     public void TourTypeSelection(string name)
@@ -114,9 +117,7 @@ public class ActionsSelection : MonoBehaviour
         }
 
         m_tourTypePanel.SetActive(false);
-
-        m_ActionIsReady = false;
-        Game.Instance.StartActionOnLane(m_laneOwner, m_TourRessource, m_PigType, m_TourType);
+        m_RessourcePanel.SetActive(true);
     }
     // Update is called once per frame
     void Update()
