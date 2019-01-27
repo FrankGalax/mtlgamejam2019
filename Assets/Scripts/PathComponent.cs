@@ -26,7 +26,7 @@ public class PathComponent : MonoBehaviour
             if (direction.sqrMagnitude > 0)
             {
                 direction.Normalize();
-                Vector3 newPosition = transform.position + direction * Speed * Time.deltaTime;
+                Vector3 newPosition = transform.position + direction * m_internalSpeed * Time.deltaTime;
                 Vector3 newPositionToNextPoint = nextPoint.position - newPosition;
 
                 if (Vector3.Dot(newPositionToNextPoint, direction) <= 0)
@@ -61,6 +61,7 @@ public class PathComponent : MonoBehaviour
     public void SpeedReduction(float reductionRation)
     {
         m_internalSpeed = Speed - (reductionRation * Speed);
+        Debug.Log("speed " + m_internalSpeed);
     }
 
     public void ResetSpeed()

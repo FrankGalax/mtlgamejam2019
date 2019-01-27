@@ -48,7 +48,7 @@ public class Mob : MonoBehaviour
             }
         }
     }
-
+    
     private void OnTriggerEnter(Collider other)
     {
         m_State = State.Attacking;
@@ -65,7 +65,7 @@ public class Mob : MonoBehaviour
             damageComponent.enabled = false;
         }
     }
-
+    
     public void OnPathComplete()
     {
         m_IsDone = true;
