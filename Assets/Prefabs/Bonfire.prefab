@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7695433486918521473}
   - component: {fileID: 1305108531042640232}
   - component: {fileID: 7314704122419831311}
-  m_Layer: 10
+  m_Layer: 15
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,8 +88,9 @@ GameObject:
   - component: {fileID: 8856706862009417862}
   - component: {fileID: 4941131588510783268}
   - component: {fileID: 2961667653202852438}
-  - component: {fileID: 5822680434926495476}
-  m_Layer: 10
+  - component: {fileID: 8611729041315910468}
+  - component: {fileID: 6073565274589269571}
+  m_Layer: 15
   m_Name: Bonfire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,12 +136,12 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5563085917214755272}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.75, z: 0}
---- !u!114 &5822680434926495476
+  m_Size: {x: 0.49110508, y: 1, z: 1}
+  m_Center: {x: -0.0027575493, y: 0.75, z: 0}
+--- !u!114 &8611729041315910468
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,12 +150,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 5563085917214755272}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 213a2ef4e0b126a4ea2403b24f881e18, type: 3}
+  m_Script: {fileID: 11500000, guid: 66288b6a1830ee941ab2ceb7343df8d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_TourType: 0
   m_RessourceType: 1
   m_MinBuildingTime: 3
+  m_SpeedReduction: 0.5
+  m_DamageOverTime: 3
+  m_ActionCost: 2
+--- !u!114 &6073565274589269571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5563085917214755272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a684d05aeef74684286b71476fd4902f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHP: 10
+  DisplayHealthBar: 1
+  HealthBarOffset: 1.75
 --- !u!1 &8201889252693325987
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +185,7 @@ GameObject:
   - component: {fileID: 2263643760405225334}
   - component: {fileID: 6555431562802204058}
   - component: {fileID: 9056841934652341550}
-  m_Layer: 10
+  m_Layer: 15
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2493760385805695520}
-  m_Layer: 10
+  m_Layer: 15
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}

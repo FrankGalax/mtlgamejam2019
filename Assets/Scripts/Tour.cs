@@ -61,7 +61,7 @@ public class Tour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_IsBeingBuild = true;
+        FinishBuilding();
     }
 
     public void FinishBuilding()

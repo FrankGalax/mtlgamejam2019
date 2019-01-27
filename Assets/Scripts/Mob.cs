@@ -33,12 +33,6 @@ public class Mob : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        m_State = State.Attacking;
-        m_AttackTimer = AttackTime;
-    }
-
     public void OnPathComplete()
     {
         Destroy(gameObject);
