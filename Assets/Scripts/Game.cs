@@ -98,7 +98,6 @@ public class Game : GameSingleton<Game>
 
         pigPath.AddRange(laneComponent.PigPath);
 
-        Debug.Log("pathlong" + pigPath.Count);
         Pig pigComponent = GetPigComponentByType(pigType);
         if(pigComponent)
         {
