@@ -48,7 +48,7 @@ public class Lane : MonoBehaviour
 
     public void SpawnMob(GameObject mobPrefab)
     {
-        GameObject mob = Instantiate(mobPrefab, m_MobSpawnPoint.position, Quaternion.identity);
+        GameObject mob = Instantiate(mobPrefab, m_MobSpawnPoint.position - Vector3.up * 2.0f, Quaternion.identity);
         PathComponent pathComponent = mob.GetComponent<PathComponent>();
         Mob mobComponent = mob.GetComponent<Mob>();
         if (pathComponent != null)
@@ -62,6 +62,13 @@ public class Lane : MonoBehaviour
             {
                 pathComponent.PathCompleteAction = () => mobComponent.OnPathComplete();
             }
+
+            pathComponent.FollowPath = false;
+        }
+
+        if (mobComponent != null)
+        {
+            mobComponent.Setup(m_MobSpawnPoint.position.y);
         }
     }
 
