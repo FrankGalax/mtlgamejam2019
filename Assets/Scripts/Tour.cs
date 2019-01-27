@@ -56,6 +56,7 @@ public class Tour : MonoBehaviour
     public float m_MinBuildingTime;
     public float BuildBarOffset = 1.75f;
     public bool IsBuilding { get { return m_State == State.Building; } }
+    public Lane Lane { get; set; }
     
     private enum State
     {
@@ -124,6 +125,36 @@ public class Tour : MonoBehaviour
         }
 
         return m_EndY;
+    }
+
+    public bool IsProtectedFromWolf()
+    {
+        if (m_RessourceType == RessourceType.RessourceType_Rock)
+        {
+            return true;
+        }
+
+        if (Lane != null && Lane.IsTowerProtectedFromWolf(this))
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    protected DamageType GetDamageType()
+    {
+        if (m_RessourceType == RessourceType.RessourceType_Straw)
+        {
+            return DamageType.Straw;
+        }
+
+        if (m_RessourceType == RessourceType.RessourceType_Wood)
+        {
+            return DamageType.Wood;
+        }
+
+        return DamageType.Rock;
     }
 
     private void Building()

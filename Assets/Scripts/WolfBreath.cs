@@ -14,12 +14,14 @@ public class WolfBreath : MonoBehaviour
         Tour[] towers = FindObjectsOfType<Tour>();
         foreach (Tour tower in towers)
         {
-            if (tower.m_RessourceType != RessourceType.RessourceType_Rock && tower.transform.position.x >= transform.position.x)
+            if (tower.transform.position.x >= transform.position.x &&
+                tower.transform.position.x <= transform.position.x + 1 &&
+                !tower.IsProtectedFromWolf())
             {
                 DamageComponent damageComponent = tower.GetComponent<DamageComponent>();
                 if (damageComponent != null)
                 {
-                    damageComponent.TakeDamage(1000, gameObject);
+                    damageComponent.TakeDamage(1000, gameObject, DamageType.Wolf);
                 }
             }
         }

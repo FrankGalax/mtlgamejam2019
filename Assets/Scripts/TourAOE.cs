@@ -86,7 +86,7 @@ public class TourAOE : Tour
         DamageComponent damageComponent = mobComponent.gameObject.GetComponent<DamageComponent>();
         if(damageComponent)
         {
-            damageComponent.TakeDamage(m_DamageOverTime, mobComponent.gameObject);
+            damageComponent.TakeDamage(m_DamageOverTime, mobComponent.gameObject, GetDamageType());
         }
 
         if (!mobComponent)
@@ -103,7 +103,7 @@ public class TourAOE : Tour
             m_powerTimer -= deltaTime;
             if(m_powerTimer <= 0)
             {
-                m_damageComponent.TakeDamage(m_ActionCost, gameObject);
+                m_damageComponent.TakeDamage(m_ActionCost, gameObject, GetDamageType());
                 m_powerTimer = 1.0f;
             }
             m_MobIsOverlapping = false;

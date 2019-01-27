@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 3
-  KillX: -10
+  KillX: -20
 --- !u!1 &5941476436841246963
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,12 +92,12 @@ PrefabInstance:
     - target: {fileID: 4808074560968571701, guid: 88ce061908c93e8449559bf6c5d2625d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.08
       objectReference: {fileID: 0}
     - target: {fileID: 4808074560968571701, guid: 88ce061908c93e8449559bf6c5d2625d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4808074560968571701, guid: 88ce061908c93e8449559bf6c5d2625d,
         type: 3}

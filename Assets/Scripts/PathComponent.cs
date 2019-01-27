@@ -61,7 +61,6 @@ public class PathComponent : MonoBehaviour
     public void SpeedReduction(float reductionRation)
     {
         m_internalSpeed = Speed - (reductionRation * Speed);
-        Debug.Log("speed " + m_internalSpeed);
     }
 
     public void ResetSpeed()
