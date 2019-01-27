@@ -42,7 +42,7 @@ public class InputManager : MonoBehaviour
                 Lane lane = hit.collider.GetComponent<Lane>();
                 if (lane != null)
                 {
-                    lane.AddTower(DebugTower);
+                    lane.AddTower(DebugTower, 1);
                 }
             }
         }

@@ -12,6 +12,12 @@ public class DamageComponent : MonoBehaviour
     {
         if (DisplayHealthBar)
         {
+            Tour tower = GetComponent<Tour>();
+            if (tower.IsBuilding)
+            {
+                return;
+            }
+
             float ratio = (float)m_CurrentHP / (float)MaxHP;
             Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position + Vector3.up * HealthBarOffset);
             screenPosition.y = Screen.height - screenPosition.y;

@@ -32,7 +32,16 @@ public class Lane : MonoBehaviour
             Rigidbody rigidbody = m_Towers[i].GetComponent<Rigidbody>();
             if (rigidbody != null)
             {
-                rigidbody.MovePosition(Vector3.Lerp(rigidbody.transform.position, TowerPlacements[i].position, 6.0f * Time.deltaTime));
+                Vector3 position = TowerPlacements[i].position;
+                position.y = m_Towers[i].GetCurrentHeight();
+                if (m_Towers[i].IsBuilding)
+                {
+                    rigidbody.MovePosition(position);
+                }
+                else
+                {
+                    rigidbody.MovePosition(Vector3.Lerp(rigidbody.transform.position, position, 6.0f * Time.deltaTime));
+                }
             }
         }
     }
@@ -56,18 +65,17 @@ public class Lane : MonoBehaviour
         }
     }
 
-    public void AddTower(GameObject towerPrefab)
+    public void AddTower(GameObject towerPrefab, float buildTime)
     {
         if (m_Towers.Count == TowerPlacements.Count || TowerPlacements.Count == 0)
         {
             return;
         }
 
-        Tour tower = Instantiate(towerPrefab, TowerPlacements[0].position, Quaternion.identity).GetComponent<Tour>();
+        Tour tower = Instantiate(towerPrefab, TowerPlacements[0].position - Vector3.up * 1.5f, Quaternion.identity).GetComponent<Tour>();
         if (tower != null)
         {
-            tower.gameObject.SetActive(false);
-            StartCoroutine(ActivateTower(tower.gameObject));
+            tower.StartBuild(buildTime, TowerPlacements[0].position.y);
             m_Towers.Insert(0, tower);
         }
     }
@@ -84,12 +92,6 @@ public class Lane : MonoBehaviour
     public void RemoveTower(Tour tower)
     {
         m_Towers.Remove(tower);
-    }
-
-    private IEnumerator ActivateTower(GameObject tower)
-    {
-        yield return new WaitForSeconds(0.5f);
-        tower.SetActive(true);
     }
 
     public List<Transform> TowerPlacements;

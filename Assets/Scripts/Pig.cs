@@ -121,6 +121,9 @@ public class Pig : MonoBehaviour
             {
                 m_IsBuilding = true;
                 m_buildTime = m_BuildingSpeedModifier * tourComponent.m_MinBuildingTime;
+                
+                m_buildingLane.AddTower(m_towerToBuild, m_buildTime);
+
             }
         }
     }
@@ -155,9 +158,6 @@ public class Pig : MonoBehaviour
             m_buildTime -= Time.deltaTime;
             if(m_buildTime <= 0)
             {
-                // pour linstant spawn jsute a la fin 
-                m_buildingLane.AddTower(m_towerToBuild);
-
                 m_IsBuilding = false;
                 ReturnToHome();
             }

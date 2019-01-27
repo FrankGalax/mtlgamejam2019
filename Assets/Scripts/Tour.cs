@@ -54,20 +54,25 @@ public class Tour : MonoBehaviour
     public TourType m_TourType;
     public RessourceType m_RessourceType;
     public float m_MinBuildingTime;
+    public float BuildBarOffset = 1.75f;
+    public bool IsBuilding { get { return m_State == State.Building; } }
+    
+    private enum State
+    {
+        Building,
+        Ready
+    }
 
-    private bool m_IsBeingBuild;
-    private bool m_IsBuilded;
+    private State m_State;
+    private float m_BuildingTimer;
+    private float m_BuildTime;
+    private float m_StartY;
+    private float m_EndY;
 
     // Start is called before the first frame update
     void Start()
     {
-        FinishBuilding();
-    }
-
-    public void FinishBuilding()
-    {
-        m_IsBuilded = true;
-        m_IsBeingBuild = false;
+        m_State = State.Building;
     }
 
     public virtual void DoUpdate(float deltaTime) { }
@@ -75,9 +80,59 @@ public class Tour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(m_IsBuilded)
+        switch (m_State)
         {
-            DoUpdate(Time.deltaTime);
+            case State.Building:
+                Building();
+                break;
+            case State.Ready:
+                DoUpdate(Time.deltaTime);
+                break;
+        }
+    }
+
+    void OnGUI()
+    {
+        if (m_State == State.Building)
+        {
+            float ratio = 1.0f - m_BuildingTimer / m_BuildTime;
+            Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position + Vector3.up * BuildBarOffset);
+            screenPosition.y = Screen.height - screenPosition.y;
+            float fullWidth = 50.0f;
+            screenPosition.x -= fullWidth / 2.0f;
+            float sizeX = ratio * fullWidth;
+            Rect rect = new Rect(screenPosition, new Vector2(fullWidth, 5));
+            GUI.DrawTexture(rect, ResourceManager.GetTexture("buildingbar"));
+            rect.size = new Vector2(sizeX, 5);
+            GUI.DrawTexture(rect, ResourceManager.GetTexture("buildingbarprogress"));
+        }
+    }
+
+    public void StartBuild(float buildTime, float targetHeight)
+    {
+        m_BuildingTimer = buildTime;
+        m_BuildTime = buildTime;
+        m_StartY = transform.position.y;
+        m_EndY = targetHeight;
+    }
+
+    public float GetCurrentHeight()
+    {
+        if (m_State == State.Building)
+        {
+            return Mathf.Lerp(m_EndY, m_StartY, m_BuildingTimer / m_BuildTime);
+        }
+
+        return m_EndY;
+    }
+
+    private void Building()
+    {
+        m_BuildingTimer -= Time.deltaTime;
+
+        if (m_BuildingTimer < 0)
+        {
+            m_State = State.Ready;
         }
     }
 }
