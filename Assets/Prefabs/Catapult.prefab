@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 8856706862009417862}
   - component: {fileID: 4941131588510783268}
   - component: {fileID: 2961667653202852438}
-  - component: {fileID: 85161596289507523}
+  - component: {fileID: 6719640640372421409}
   m_Layer: 10
   m_Name: Catapult
   m_TagString: Untagged
@@ -140,7 +140,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 1, z: 1}
   m_Center: {x: 0, y: 0.75, z: 0}
---- !u!114 &85161596289507523
+--- !u!114 &6719640640372421409
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,12 +149,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 5563085917214755272}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 213a2ef4e0b126a4ea2403b24f881e18, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a0aee54b65ab554c8d41b697f070821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_TourType: 1
   m_RessourceType: 2
   m_MinBuildingTime: 0
+  MissilePrefab: {fileID: 7159142366259680510, guid: 8a2af12cb9f9cee42964655cf0fc1ea0,
+    type: 3}
+  FireTime: 3
+  MissileSpawnOffset: {x: 0, y: 0.5, z: 0}
 --- !u!1 &8201889252693325987
 GameObject:
   m_ObjectHideFlags: 0
