@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 4941131588510783268}
   - component: {fileID: 2961667653202852438}
   - component: {fileID: 6719640640372421409}
+  - component: {fileID: 776230025673706768}
   m_Layer: 10
   m_Name: Catapult
   m_TagString: Untagged
@@ -125,7 +126,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &2961667653202852438
 BoxCollider:
@@ -154,11 +155,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TourType: 1
   m_RessourceType: 2
-  m_MinBuildingTime: 0
+  m_MinBuildingTime: 10
   MissilePrefab: {fileID: 7159142366259680510, guid: 8a2af12cb9f9cee42964655cf0fc1ea0,
     type: 3}
   FireTime: 3
   MissileSpawnOffset: {x: 0, y: 0.5, z: 0}
+--- !u!114 &776230025673706768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5563085917214755272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a684d05aeef74684286b71476fd4902f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHP: 5
+  DisplayHealthBar: 1
+  HealthBarOffset: 1.75
 --- !u!1 &8201889252693325987
 GameObject:
   m_ObjectHideFlags: 0
