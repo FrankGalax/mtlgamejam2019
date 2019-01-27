@@ -68,7 +68,7 @@ public class Lane : MonoBehaviour
 
         if (mobComponent != null)
         {
-            mobComponent.Setup(m_MobSpawnPoint.position.y);
+            mobComponent.Setup(m_MobSpawnPoint.position);
         }
     }
 
