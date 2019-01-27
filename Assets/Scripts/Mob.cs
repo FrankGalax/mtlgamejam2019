@@ -37,6 +37,7 @@ public class Mob : MonoBehaviour
     {
         Destroy(gameObject);
         Game.Instance.LooseHouseHealth();
+        FindObjectOfType<House>().LooseHealth();
     }
 
     public void OnTowerKill(Tour tower)
