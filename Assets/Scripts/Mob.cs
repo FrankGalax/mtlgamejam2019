@@ -33,6 +33,12 @@ public class Mob : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        m_State = State.Attacking;
+        m_AttackTimer = AttackTime;
+    }
+
     public void OnPathComplete()
     {
         Destroy(gameObject);
@@ -62,6 +68,15 @@ public class Mob : MonoBehaviour
 
         if (facingTower != null)
         {
+            Tour facingTowerComponent = facingTower.GetComponent<Tour>();
+            if (facingTowerComponent)
+            {
+                if (facingTowerComponent.m_TourType == TourType.TourType_AOE)
+                {
+                    return;
+                }
+            }
+
             m_State = State.Attacking;
             PathComponent pathComponent = GetComponent<PathComponent>();
             if (pathComponent != null)

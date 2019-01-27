@@ -96,7 +96,7 @@ public class Game : GameSingleton<Game>
         }
 
         pigPath.AddRange(laneComponent.PigPath);
-        
+
         Pig pigComponent = GetPigComponentByType(pigType);
         if(pigComponent)
         {

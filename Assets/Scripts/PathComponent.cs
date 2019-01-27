@@ -14,6 +14,7 @@ public class PathComponent : MonoBehaviour
     void Start()
     {
         FollowPath = true;
+        m_internalSpeed = Speed;
     }
 
     void FixedUpdate()
@@ -57,6 +58,16 @@ public class PathComponent : MonoBehaviour
         m_Path.Clear();
     }
 
+    public void SpeedReduction(float reductionRation)
+    {
+        m_internalSpeed = Speed - (reductionRation * Speed);
+    }
+
+    public void ResetSpeed()
+    {
+        m_internalSpeed = Speed;
+    }
+
     public float Speed = 1.0f;
 
     public Action PathCompleteAction { private get; set; }
@@ -64,4 +75,5 @@ public class PathComponent : MonoBehaviour
 
     private List<Transform> m_Path;
     private Rigidbody m_Rigidbody;
+    private float m_internalSpeed;
 }
