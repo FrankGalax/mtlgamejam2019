@@ -87,8 +87,7 @@ public class Game : GameSingleton<Game>
             return;
         }
 
-        InputManager inputManager = FindObjectOfType<InputManager>();
-        inputManager.IsReady();
+        StartCoroutine(ActivateInput());
 
         List<Transform> pigPath = new List<Transform>();
         foreach (Transform pathPoint in m_PigsStartPath)
@@ -97,8 +96,7 @@ public class Game : GameSingleton<Game>
         }
 
         pigPath.AddRange(laneComponent.PigPath);
-
-        Debug.Log("pathlong" + pigPath.Count);
+        
         Pig pigComponent = GetPigComponentByType(pigType);
         if(pigComponent)
         {
@@ -150,5 +148,12 @@ public class Game : GameSingleton<Game>
         FindObjectOfType<MobSpawner>().enabled = false;
 
         GameUI.Instance.ShowEndGamePanel();
+    }
+
+    private IEnumerator ActivateInput()
+    {
+        yield return new WaitForSeconds(0.5f);
+        InputManager inputManager = FindObjectOfType<InputManager>();
+        inputManager.IsReady();
     }
 }

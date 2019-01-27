@@ -19,7 +19,6 @@ public class InputManager : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && isReady)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Debug.Log("Lanecomp: " + Input.mousePosition);
             RaycastHit hit;
             int laneMask = 1 << LayerMask.NameToLayer("Lane");
             if (Physics.Raycast(ray, out hit, 100.0f, laneMask))

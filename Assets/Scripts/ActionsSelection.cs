@@ -36,7 +36,6 @@ public class ActionsSelection : MonoBehaviour
 
         m_laneOwner = ownerLane;
         Quaternion rotation = gameObject.GetComponent<RectTransform>().rotation;
-        Debug.Log("SETTTTERRRR " + inputPosition);
         gameObject.GetComponent<RectTransform>().SetPositionAndRotation(inputPosition, rotation);
         m_pigsSelectionPanel.SetActive(true);
     }

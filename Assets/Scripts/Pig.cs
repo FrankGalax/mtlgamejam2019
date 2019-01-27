@@ -53,8 +53,6 @@ public class Pig : MonoBehaviour
             m_returnPath.Add(path[i - 1]);
         }
 
-        Debug.Log("pathlong" + m_returnPath.Count);
-
         gameObject.transform.SetPositionAndRotation(path[0].position, path[0].rotation);
         path.RemoveAt(0);
 
@@ -118,7 +116,6 @@ public class Pig : MonoBehaviour
     {
         if (m_towerToBuild != null)
         {
-            Debug.Log(" ffasfdfs");
             Tour tourComponent = m_towerToBuild.GetComponent<Tour>();
             if(tourComponent != null)
             {
