@@ -4,9 +4,9 @@ public class House : MonoBehaviour
 {
     void Awake()
     {
-        m_RockGraphics = transform.Find("RockGraphics");
-        m_WoodGraphics = transform.Find("WoodGraphics");
         m_StrawGraphics = transform.Find("StrawGraphics");
+        m_WoodGraphics = transform.Find("WoodGraphics");
+        m_RockGraphics = transform.Find("RockGraphics");
     }
 
     void Start()
@@ -22,15 +22,15 @@ public class House : MonoBehaviour
         switch (m_CurrentHealth)
         {
             case 2:
-                toHide = m_RockGraphics.gameObject;
+                toHide = m_StrawGraphics.gameObject;
                 toShow = m_WoodGraphics.gameObject;
                 break;
             case 1:
                 toHide = m_WoodGraphics.gameObject;
-                toShow = m_StrawGraphics.gameObject;
+                toShow = m_RockGraphics.gameObject;
                 break;
             case 0:
-                toHide = m_StrawGraphics.gameObject;
+                toHide = m_RockGraphics.gameObject;
                 break;
         }
 
