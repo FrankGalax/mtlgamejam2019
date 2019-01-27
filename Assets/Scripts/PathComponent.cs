@@ -30,7 +30,6 @@ public class PathComponent : MonoBehaviour
 
                 if (Vector3.Dot(newPositionToNextPoint, direction) <= 0)
                 {
-                    Debug.Log("OK");
                     m_Path.RemoveAt(0);
                     m_Rigidbody.MovePosition(nextPoint.position);
 
