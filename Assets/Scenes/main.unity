@@ -832,6 +832,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4038062353816052324, guid: a5260fc12836ed04193696a1cbdfa564,
         type: 3}
+      propertyPath: PigPath.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4038062353816052324, guid: a5260fc12836ed04193696a1cbdfa564,
+        type: 3}
       propertyPath: MobPath.Array.data[0]
       value: 
       objectReference: {fileID: 6031809982173582745}
@@ -860,6 +865,26 @@ PrefabInstance:
       propertyPath: MobPath.Array.data[5]
       value: 
       objectReference: {fileID: 1942664592204958775}
+    - target: {fileID: 4038062353816052324, guid: a5260fc12836ed04193696a1cbdfa564,
+        type: 3}
+      propertyPath: PigPath.Array.data[0]
+      value: 
+      objectReference: {fileID: 3906791152625786984}
+    - target: {fileID: 4038062353816052324, guid: a5260fc12836ed04193696a1cbdfa564,
+        type: 3}
+      propertyPath: PigPath.Array.data[1]
+      value: 
+      objectReference: {fileID: 4035642839875783285}
+    - target: {fileID: 4038062353816052324, guid: a5260fc12836ed04193696a1cbdfa564,
+        type: 3}
+      propertyPath: PigPath.Array.data[2]
+      value: 
+      objectReference: {fileID: 7133428172791073521}
+    - target: {fileID: 4038062353816052324, guid: a5260fc12836ed04193696a1cbdfa564,
+        type: 3}
+      propertyPath: PigPath.Array.data[3]
+      value: 
+      objectReference: {fileID: 6031809982173582745}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5260fc12836ed04193696a1cbdfa564, type: 3}
 --- !u!1 &468325670
@@ -2009,6 +2034,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256127577}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1325903177 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5098263178356922241, guid: e7b612854c8d92b47bad20d1647c34a0,
+    type: 3}
+  m_PrefabInstance: {fileID: 4008359151138394695}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1330689431
 GameObject:
   m_ObjectHideFlags: 0
@@ -2606,6 +2637,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4038062353816052324, guid: a5260fc12836ed04193696a1cbdfa564,
         type: 3}
+      propertyPath: PigPath.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4038062353816052324, guid: a5260fc12836ed04193696a1cbdfa564,
+        type: 3}
       propertyPath: MobPath.Array.data[0]
       value: 
       objectReference: {fileID: 3285799690456720687}
@@ -2619,6 +2655,11 @@ PrefabInstance:
       propertyPath: MobPath.Array.data[2]
       value: 
       objectReference: {fileID: 1942664592204958775}
+    - target: {fileID: 4038062353816052324, guid: a5260fc12836ed04193696a1cbdfa564,
+        type: 3}
+      propertyPath: PigPath.Array.data[0]
+      value: 
+      objectReference: {fileID: 3285799690456720687}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5260fc12836ed04193696a1cbdfa564, type: 3}
 --- !u!1 &1520328665 stripped
@@ -2895,6 +2936,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4038062353816052324, guid: a5260fc12836ed04193696a1cbdfa564,
         type: 3}
+      propertyPath: PigPath.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4038062353816052324, guid: a5260fc12836ed04193696a1cbdfa564,
+        type: 3}
       propertyPath: MobPath.Array.data[0]
       value: 
       objectReference: {fileID: 4035642839875783285}
@@ -2913,6 +2959,16 @@ PrefabInstance:
       propertyPath: MobPath.Array.data[3]
       value: 
       objectReference: {fileID: 1942664592204958775}
+    - target: {fileID: 4038062353816052324, guid: a5260fc12836ed04193696a1cbdfa564,
+        type: 3}
+      propertyPath: PigPath.Array.data[0]
+      value: 
+      objectReference: {fileID: 3906791152625786984}
+    - target: {fileID: 4038062353816052324, guid: a5260fc12836ed04193696a1cbdfa564,
+        type: 3}
+      propertyPath: PigPath.Array.data[1]
+      value: 
+      objectReference: {fileID: 4035642839875783285}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5260fc12836ed04193696a1cbdfa564, type: 3}
 --- !u!1 &1599461964
@@ -3301,6 +3357,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cffc8e4f48c3ae649aebd3f0466cf253, type: 3}
+--- !u!4 &1941739497 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2158238686089346204, guid: e7b612854c8d92b47bad20d1647c34a0,
+    type: 3}
+  m_PrefabInstance: {fileID: 4008359151138394695}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1995722614
 GameObject:
   m_ObjectHideFlags: 0
@@ -3471,11 +3533,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8916154143372785201, guid: 8e15565ed505aae4c9a53be5655f18ad,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e15565ed505aae4c9a53be5655f18ad, type: 3}
 --- !u!4 &3285799690456720687 stripped
@@ -3640,42 +3697,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
         type: 3}
-      propertyPath: m_pigs.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
-        type: 3}
-      propertyPath: m_PigsStartPath.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
-        type: 3}
-      propertyPath: m_Lanes.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
-        type: 3}
-      propertyPath: m_Towers.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
-        type: 3}
-      propertyPath: m_TowersObjects.Array.size
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
-        type: 3}
-      propertyPath: m_pigs.Array.data[0]
+      propertyPath: m_pigsObj.Array.data[0]
       value: 
       objectReference: {fileID: 971908494}
     - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
         type: 3}
-      propertyPath: m_pigs.Array.data[1]
+      propertyPath: m_pigsObj.Array.data[1]
       value: 
       objectReference: {fileID: 1520328665}
     - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
         type: 3}
-      propertyPath: m_pigs.Array.data[2]
+      propertyPath: m_pigsObj.Array.data[2]
       value: 
       objectReference: {fileID: 1587906646}
     - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
@@ -3687,7 +3719,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PigsStartPath.Array.data[1]
       value: 
+      objectReference: {fileID: 1941739497}
+    - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
+        type: 3}
+      propertyPath: m_PigsStartPath.Array.data[2]
+      value: 
+      objectReference: {fileID: 1325903177}
+    - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
+        type: 3}
+      propertyPath: m_PigsStartPath.Array.data[3]
+      value: 
       objectReference: {fileID: 415441487}
+    - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
+        type: 3}
+      propertyPath: m_PigsStartPath.Array.data[4]
+      value: 
+      objectReference: {fileID: 4257058052035637528}
     - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
         type: 3}
       propertyPath: m_Lanes.Array.data[0]
@@ -3708,71 +3755,6 @@ PrefabInstance:
       propertyPath: m_Lanes.Array.data[3]
       value: 
       objectReference: {fileID: 1182615406}
-    - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
-        type: 3}
-      propertyPath: m_Towers.Array.data[0]
-      value: 
-      objectReference: {fileID: 5563085917214755272, guid: 26235d9ed89247c48a376e9f6a6c3477,
-        type: 3}
-    - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
-        type: 3}
-      propertyPath: m_PigsStartPath.Array.data[2]
-      value: 
-      objectReference: {fileID: 4257058052035637528}
-    - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
-        type: 3}
-      propertyPath: m_TowersObjects.Array.data[0]
-      value: 
-      objectReference: {fileID: 5563085917214755272, guid: 4b720ed2d07fda7429a58fa90d498e83,
-        type: 3}
-    - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
-        type: 3}
-      propertyPath: m_TowersObjects.Array.data[1]
-      value: 
-      objectReference: {fileID: 5563085917214755272, guid: 5fcfaff6f7346c44f965080c63ddc09d,
-        type: 3}
-    - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
-        type: 3}
-      propertyPath: m_TowersObjects.Array.data[2]
-      value: 
-      objectReference: {fileID: 5563085917214755272, guid: 0c47db9d0f5624147b170e05917e6bca,
-        type: 3}
-    - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
-        type: 3}
-      propertyPath: m_TowersObjects.Array.data[3]
-      value: 
-      objectReference: {fileID: 5563085917214755272, guid: cf07ac2f7c32950488a597f1ce73259f,
-        type: 3}
-    - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
-        type: 3}
-      propertyPath: m_TowersObjects.Array.data[4]
-      value: 
-      objectReference: {fileID: 5563085917214755272, guid: 495387730875af34d987de9ca761a912,
-        type: 3}
-    - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
-        type: 3}
-      propertyPath: m_TowersObjects.Array.data[5]
-      value: 
-      objectReference: {fileID: 5563085917214755272, guid: 26235d9ed89247c48a376e9f6a6c3477,
-        type: 3}
-    - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
-        type: 3}
-      propertyPath: m_TowersObjects.Array.data[6]
-      value: 
-      objectReference: {fileID: 5563085917214755272, guid: dff3994772c95974ca374fb93fb6e4a4,
-        type: 3}
-    - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
-        type: 3}
-      propertyPath: m_TowersObjects.Array.data[7]
-      value: 
-      objectReference: {fileID: 5563085917214755272, guid: 0c9f9b9bed790534ba61221136496658,
-        type: 3}
-    - target: {fileID: 5246932160834664930, guid: 9038430e22a020144a52850aefa4efd5,
-        type: 3}
-      propertyPath: m_TowersObjects.Array.data[8]
-      value: 
-      objectReference: {fileID: 5563085917214755272, guid: 8a7b25f5dcfcded468006b0555cf5a97,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9038430e22a020144a52850aefa4efd5, type: 3}
 --- !u!4 &5310662006927726395 stripped
@@ -3861,6 +3843,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4038062353816052324, guid: a5260fc12836ed04193696a1cbdfa564,
         type: 3}
+      propertyPath: PigPath.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4038062353816052324, guid: a5260fc12836ed04193696a1cbdfa564,
+        type: 3}
       propertyPath: MobPath.Array.data[0]
       value: 
       objectReference: {fileID: 5310662006927726395}
@@ -3884,6 +3871,21 @@ PrefabInstance:
       propertyPath: MobPath.Array.data[4]
       value: 
       objectReference: {fileID: 1942664592204958775}
+    - target: {fileID: 4038062353816052324, guid: a5260fc12836ed04193696a1cbdfa564,
+        type: 3}
+      propertyPath: PigPath.Array.data[0]
+      value: 
+      objectReference: {fileID: 3285799690456720687}
+    - target: {fileID: 4038062353816052324, guid: a5260fc12836ed04193696a1cbdfa564,
+        type: 3}
+      propertyPath: PigPath.Array.data[1]
+      value: 
+      objectReference: {fileID: 293821731885250758}
+    - target: {fileID: 4038062353816052324, guid: a5260fc12836ed04193696a1cbdfa564,
+        type: 3}
+      propertyPath: PigPath.Array.data[2]
+      value: 
+      objectReference: {fileID: 5310662006927726395}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5260fc12836ed04193696a1cbdfa564, type: 3}
 --- !u!4 &7133428172791073521 stripped

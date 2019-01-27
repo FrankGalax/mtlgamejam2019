@@ -96,6 +96,7 @@ public class Pig : MonoBehaviour
     {
         if (m_towerToBuild != null)
         {
+            Debug.Log(" ffasfdfs");
             Tour tourComponent = m_towerToBuild.GetComponent<Tour>();
             if(tourComponent != null)
             {

@@ -76,6 +76,10 @@ public class Lane : MonoBehaviour
     {
         m_IsOccupied = isOccupied;
     }
+    public bool GetIsOccupied()
+    {
+        return m_IsOccupied;
+    }
 
     public void RemoveTower(Tour tower)
     {

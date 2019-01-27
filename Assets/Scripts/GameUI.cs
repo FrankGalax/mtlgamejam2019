@@ -23,6 +23,10 @@ public class GameUI : GameSingleton<GameUI>
         SceneManager.LoadScene("main");
     }
 
+    public void ShowChoice(Vector2 position, Lane laneComponent)
+    {
+        m_actionsSelection.Active(position, laneComponent);
+    }
     public RessourceType GetCurrentPig()
     {
         Debug.Log("SAluttt: " + m_actionsSelection.m_PigType);

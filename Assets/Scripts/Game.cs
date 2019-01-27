@@ -101,6 +101,9 @@ public class Game : GameSingleton<Game>
 
     public void StartActionOnLane(Lane laneComponent)
     {
+        InputManager inputManager = FindObjectOfType<InputManager>();
+        inputManager.IsReady();
+
         if(!laneComponent)
         {
             return;
@@ -112,7 +115,7 @@ public class Game : GameSingleton<Game>
             pigPath.Add(pathPoint);
         }
 
-        pigPath.Add(laneComponent.MobPath[0]);
+        pigPath.AddRange(laneComponent.PigPath);
 
         Pig pigComponent = GetPigComponentByType(GameUI.Instance.GetCurrentPig());
         if(pigComponent)

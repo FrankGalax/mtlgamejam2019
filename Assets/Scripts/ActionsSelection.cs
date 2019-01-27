@@ -13,12 +13,22 @@ public class ActionsSelection : MonoBehaviour
     public GameObject m_pigsSelectionPanel;
 
     private bool m_ActionIsReady;
+    private Lane m_laneOwner;
     // Start is called before the first frame update
     void Start()
     {
         m_ActionIsReady = false;
     }
 
+    public void Active(Vector2 inputPosition, Lane ownerLane)
+    {
+        m_ActionIsReady = true;
+        m_laneOwner = ownerLane;
+        Quaternion rotation = gameObject.transform.rotation;
+
+        gameObject.transform.SetPositionAndRotation(inputPosition, rotation);
+        m_pigsSelectionPanel.SetActive(true);
+    }
     public void PigSelection(string name)
     {
         switch(name)
@@ -80,8 +90,7 @@ public class ActionsSelection : MonoBehaviour
     {
         if(m_ActionIsReady)
         {
-            InputManager inputManager = FindObjectOfType<InputManager>();
-            inputManager.IsReady();
+            Game.Instance.StartActionOnLane(m_laneOwner);
         }
     }
 }

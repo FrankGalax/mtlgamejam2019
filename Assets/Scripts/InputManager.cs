@@ -23,9 +23,11 @@ public class InputManager : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100.0f, laneMask))
             {
                 Lane lane = hit.collider.GetComponent<Lane>();
-                if (lane != null)
+                if (lane != null && !lane.GetIsOccupied())
                 {
-                    Game.Instance.StartActionOnLane(lane);
+                    Debug.Log("Lanecomp: " + lane.gameObject.transform.position);
+                    isReady = false;
+                    GameUI.Instance.ShowChoice(Input.mousePosition, lane);
                 }
             }
         }
