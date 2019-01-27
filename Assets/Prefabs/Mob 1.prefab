@@ -59,8 +59,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3657098674251463996}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.25, z: 0}
-  m_LocalScale: {x: 1, y: 0.79999995, z: 1}
+  m_LocalPosition: {x: 0, y: -0.071, z: 0}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 2429192026051650976}
   m_RootOrder: 2
@@ -344,6 +344,7 @@ MonoBehaviour:
   MaxHP: 5
   DisplayHealthBar: 1
   HealthBarOffset: 1.5
+  ResistRock: 1
 --- !u!1 &7256442969029087042
 GameObject:
   m_ObjectHideFlags: 0

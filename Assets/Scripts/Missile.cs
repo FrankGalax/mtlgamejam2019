@@ -55,7 +55,7 @@ public class Missile : MonoBehaviour
 
         if (damageComponent != null)
         {
-            damageComponent.TakeDamage(Damage, gameObject);
+            damageComponent.TakeDamage(Damage, gameObject, DamageType);
         }
 
         m_CurrentPiercingCount--;
@@ -81,6 +81,7 @@ public class Missile : MonoBehaviour
     public int Damage = 1;
     public int PiercingCount = 1;
     public bool UseCollisions = true;
+    public DamageType DamageType;
 
     private Rigidbody m_Rigidbody;
     private int m_CurrentPiercingCount;

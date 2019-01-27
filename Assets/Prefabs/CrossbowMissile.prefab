@@ -81,6 +81,7 @@ MonoBehaviour:
   Damage: 2
   PiercingCount: 2
   UseCollisions: 0
+  DamageType: 1
 --- !u!54 &8038333482175495722
 Rigidbody:
   m_ObjectHideFlags: 0

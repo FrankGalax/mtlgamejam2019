@@ -91,8 +91,8 @@ MonoBehaviour:
     Mob1Chance: 0.8
     Mob2Chance: 0.1
     Mob3Chance: 0.1
-    MinWolfTime: 20
-    MaxWolfTime: 40
+    MinWolfTime: 15
+    MaxWolfTime: 16
   - TimeLimit: 120
     SpawnTime: 4
     Mob1Chance: 0.6

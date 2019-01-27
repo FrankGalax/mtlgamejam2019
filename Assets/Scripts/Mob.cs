@@ -170,7 +170,7 @@ public class Mob : MonoBehaviour
                 DamageComponent damageComponent = facingTower.GetComponent<DamageComponent>();
                 if (damageComponent != null)
                 {
-                    damageComponent.TakeDamage(AttackDamage, gameObject);
+                    damageComponent.TakeDamage(AttackDamage, gameObject, DamageType.Mob);
                 }
             }
         }

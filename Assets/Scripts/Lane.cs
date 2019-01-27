@@ -83,6 +83,7 @@ public class Lane : MonoBehaviour
         if (tower != null)
         {
             tower.StartBuild(buildTime, TowerPlacements[0].position.y);
+            tower.Lane = this;
             m_Towers.Insert(0, tower);
         }
     }
@@ -99,6 +100,24 @@ public class Lane : MonoBehaviour
     public void RemoveTower(Tour tower)
     {
         m_Towers.Remove(tower);
+    }
+
+    public bool IsTowerProtectedFromWolf(Tour tower)
+    {
+        bool foundTower = false;
+        foreach (Tour towerInLane in m_Towers)
+        {
+            if (foundTower && towerInLane.m_RessourceType == RessourceType.RessourceType_Rock)
+            {
+                return true;
+            }
+
+            if (!foundTower && towerInLane == tower)
+            {
+                foundTower = true;
+            }
+        }
+        return false;
     }
 
     public List<Transform> TowerPlacements;

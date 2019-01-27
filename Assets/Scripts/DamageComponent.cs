@@ -1,6 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public enum DamageType
+{
+    Straw,
+    Wood,
+    Rock,
+    Mob,
+    Wolf
+}
+
 public class DamageComponent : MonoBehaviour
 {
     void Start()
@@ -29,8 +38,13 @@ public class DamageComponent : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage, GameObject instigator)
+    public void TakeDamage(int damage, GameObject instigator, DamageType damageType)
     {
+        if (damageType == DamageType.Rock && ResistRock)
+        {
+            return;
+        }
+
         if (m_CurrentHP <= 0)
         {
             return;
@@ -84,6 +98,7 @@ public class DamageComponent : MonoBehaviour
     public int MaxHP;
     public bool DisplayHealthBar;
     public float HealthBarOffset = 1.75f;
+    public bool ResistRock = false;
 
     private int m_CurrentHP;
     private float m_LastGUIRatio;

@@ -39,7 +39,6 @@ public class GameUI : GameSingleton<GameUI>
 
     public void BackChoice()
     {
-        Debug.Log(" bakc");
         m_actionsSelection.BackChoice();
     }
 
