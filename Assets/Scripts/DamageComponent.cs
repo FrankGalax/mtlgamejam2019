@@ -6,6 +6,7 @@ public class DamageComponent : MonoBehaviour
     void Start()
     {
         m_CurrentHP = MaxHP;
+        m_LastGUIRatio = 1.0f;
     }
 
     void OnGUI()
@@ -13,15 +14,15 @@ public class DamageComponent : MonoBehaviour
         if (DisplayHealthBar)
         {
             Tour tower = GetComponent<Tour>();
-            if (tower.IsBuilding)
+            if (tower != null && tower.IsBuilding)
             {
                 return;
             }
 
-            float ratio = (float)m_CurrentHP / (float)MaxHP;
+            m_LastGUIRatio = Mathf.Lerp(m_LastGUIRatio, (float)m_CurrentHP / (float)MaxHP, 6.0f * Time.deltaTime);
             Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position + Vector3.up * HealthBarOffset);
             screenPosition.y = Screen.height - screenPosition.y;
-            float sizeX = ratio * 50.0f;
+            float sizeX = m_LastGUIRatio * 50.0f;
             screenPosition.x -= sizeX / 2.0f;
             Rect rect = new Rect(screenPosition, new Vector2(sizeX, 5));
             GUI.DrawTexture(rect, ResourceManager.GetTexture("healthbar"));
@@ -85,4 +86,5 @@ public class DamageComponent : MonoBehaviour
     public float HealthBarOffset = 1.75f;
 
     private int m_CurrentHP;
+    private float m_LastGUIRatio;
 }

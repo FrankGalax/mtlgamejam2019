@@ -9,11 +9,11 @@ public class PathComponent : MonoBehaviour
     {
         m_Path = new List<Transform>();
         m_Rigidbody = GetComponent<Rigidbody>();
+        FollowPath = true;
     }
 
     void Start()
     {
-        FollowPath = true;
         m_internalSpeed = Speed;
     }
 

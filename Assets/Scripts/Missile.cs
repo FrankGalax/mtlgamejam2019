@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class Missile : MonoBehaviour
 {
@@ -10,18 +11,21 @@ public class Missile : MonoBehaviour
     void Start()
     {
         m_CurrentPiercingCount = PiercingCount;
+        m_IsDead = false;
     }
 
     void FixedUpdate()
     {
-        if (m_Rigidbody != null)
+        if (m_Rigidbody != null && !m_IsDead)
         {
             m_Rigidbody.MovePosition(transform.position + Vector3.right * Speed * Time.deltaTime);
         }
 
-        if (transform.position.x > 20)
+        if (transform.position.x > 9.0f)
         {
-            Destroy(gameObject);
+            m_IsDead = true;
+            GetComponent<SphereCollider>().enabled = false;
+            StartCoroutine(DeathAnim());
         }
     }
 
@@ -61,6 +65,18 @@ public class Missile : MonoBehaviour
         }
     }
 
+    private IEnumerator DeathAnim()
+    {
+        float timer = 0;
+        while (timer < 0.5f)
+        {
+            yield return new WaitForFixedUpdate();
+            timer += Time.deltaTime;
+            transform.position -= Vector3.up * Time.fixedDeltaTime;
+        }
+        Destroy(gameObject);
+    }
+
     public float Speed = 3.0f;
     public int Damage = 1;
     public int PiercingCount = 1;
@@ -68,4 +84,5 @@ public class Missile : MonoBehaviour
 
     private Rigidbody m_Rigidbody;
     private int m_CurrentPiercingCount;
+    private bool m_IsDead;
 }
