@@ -10,7 +10,7 @@ public class GameUI : GameSingleton<GameUI>
     {
         Transform canvas = transform.Find("Canvas");
         m_EndGamePanel = canvas.Find("EndGamePanel");
-        m_actionsSelection = gameObject.GetComponent<ActionsSelection>();
+        m_actionsSelection = transform.Find("Canvas").transform.Find("Selection").GetComponent<ActionsSelection>();
     }
 
     public void ShowEndGamePanel()
@@ -23,24 +23,18 @@ public class GameUI : GameSingleton<GameUI>
         SceneManager.LoadScene("main");
     }
 
+    public void ActivePig(string name)
+    {
+        m_actionsSelection.OnActivePigUpdate(name, true);
+    }
+    public void DeactivePig(string name)
+    {
+        m_actionsSelection.OnActivePigUpdate(name, false);
+    }
+
     public void ShowChoice(Vector2 position, Lane laneComponent)
     {
         m_actionsSelection.Active(position, laneComponent);
-    }
-    public RessourceType GetCurrentPig()
-    {
-        Debug.Log("SAluttt: " + m_actionsSelection.m_PigType);
-        return m_actionsSelection.m_PigType;
-    }
-
-    public RessourceType GetCurrentTourRessource()
-    {
-        return m_actionsSelection.m_TourRessource;
-    }
-
-    public TourType GetCurrentTourType()
-    {
-        return m_actionsSelection.m_TourType;
     }
 
     public void Quit()

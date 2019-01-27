@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class ActionsSelection : MonoBehaviour
@@ -20,13 +21,23 @@ public class ActionsSelection : MonoBehaviour
         m_ActionIsReady = false;
     }
 
+    public void OnActivePigUpdate(string name, bool isActive)
+    {
+        Button pigButton = m_pigsSelectionPanel.transform.Find(name).GetComponent<Button>();
+        if(pigButton)
+        {
+            pigButton.interactable = isActive;
+        }
+    }
+
     public void Active(Vector2 inputPosition, Lane ownerLane)
     {
         m_ActionIsReady = true;
-        m_laneOwner = ownerLane;
-        Quaternion rotation = gameObject.transform.rotation;
 
-        gameObject.transform.SetPositionAndRotation(inputPosition, rotation);
+        m_laneOwner = ownerLane;
+        Quaternion rotation = gameObject.GetComponent<RectTransform>().rotation;
+        Debug.Log("SETTTTERRRR " + inputPosition);
+        gameObject.GetComponent<RectTransform>().SetPositionAndRotation(inputPosition, rotation);
         m_pigsSelectionPanel.SetActive(true);
     }
     public void PigSelection(string name)
@@ -82,15 +93,12 @@ public class ActionsSelection : MonoBehaviour
         }
 
         m_tourTypePanel.SetActive(false);
-        m_pigsSelectionPanel.SetActive(true);
-        m_ActionIsReady = true;
+
+        m_ActionIsReady = false;
+        Game.Instance.StartActionOnLane(m_laneOwner, m_TourRessource, m_PigType, m_TourType);
     }
     // Update is called once per frame
     void Update()
     {
-        if(m_ActionIsReady)
-        {
-            Game.Instance.StartActionOnLane(m_laneOwner);
-        }
     }
 }

@@ -21,11 +21,11 @@ public class Game : GameSingleton<Game>
             strawTowers.towerData = new List<TowerData>();
 
             TowerDataLists woodTowers = new TowerDataLists();
-            strawTowers.ressourceType = RessourceType.RessourceType_Wood;
+            woodTowers.ressourceType = RessourceType.RessourceType_Wood;
             woodTowers.towerData = new List<TowerData>();
 
             TowerDataLists rockTowers = new TowerDataLists();
-            strawTowers.ressourceType = RessourceType.RessourceType_Rock;
+            rockTowers.ressourceType = RessourceType.RessourceType_Rock;
             rockTowers.towerData = new List<TowerData>();
 
             foreach (GameObject towerObj in m_TowersObjects)
@@ -78,36 +78,17 @@ public class Game : GameSingleton<Game>
     void Start()
     {
         HouseHealth = 3;
-
-        /*Pig pigComponent = m_pigs[0].GetComponent<Pig>();
-        Lane laneComponent = m_Lanes[0].GetComponent<Lane>();
-
-        if (laneComponent != null)
-        {
-            List<Transform> pigPath = new List<Transform>();
-            foreach (Transform pathPoint in m_PigsStartPath)
-            {
-                pigPath.Add(pathPoint);
-            }
-
-            pigPath.Add(laneComponent.MobPath[0]); // get the begin of the lane
-
-            if (pigComponent != null)
-            {
-                pigComponent.UsePig(pigPath, m_towers.GetTowerObject(RessourceType.RessourceType_Straw, TourType.TourType_AOE), laneComponent);
-            }
-        }*/
     }
 
-    public void StartActionOnLane(Lane laneComponent)
+    public void StartActionOnLane(Lane laneComponent, RessourceType tourRes, RessourceType pigType, TourType tourType)
     {
-        InputManager inputManager = FindObjectOfType<InputManager>();
-        inputManager.IsReady();
-
         if(!laneComponent)
         {
             return;
         }
+
+        InputManager inputManager = FindObjectOfType<InputManager>();
+        inputManager.IsReady();
 
         List<Transform> pigPath = new List<Transform>();
         foreach (Transform pathPoint in m_PigsStartPath)
@@ -117,10 +98,11 @@ public class Game : GameSingleton<Game>
 
         pigPath.AddRange(laneComponent.PigPath);
 
-        Pig pigComponent = GetPigComponentByType(GameUI.Instance.GetCurrentPig());
+        Debug.Log("pathlong" + pigPath.Count);
+        Pig pigComponent = GetPigComponentByType(pigType);
         if(pigComponent)
         {
-            pigComponent.UsePig(pigPath, m_towers.GetTowerObject(GameUI.Instance.GetCurrentTourRessource(), GameUI.Instance.GetCurrentTourType()), laneComponent);
+            pigComponent.UsePig(pigPath, m_towers.GetTowerObject(tourRes, tourType), laneComponent);
         }
     }
 
