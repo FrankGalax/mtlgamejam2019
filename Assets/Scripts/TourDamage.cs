@@ -11,7 +11,7 @@ public class TourDamage : Tour
         m_FireTimer = -1.0f;
     }
 
-    void Update()
+    public override void DoUpdate(float deltaTime)
     {
         m_FireTimer -= Time.deltaTime;
 
