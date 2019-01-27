@@ -48,21 +48,20 @@ public class Mob : MonoBehaviour
             }
         }
     }
-    
-    private void OnTriggerEnter(Collider other)
-    {
-        m_State = State.Attacking;
-        m_AttackTimer = AttackTime;
-    }
 
-    public void Setup(float endY)
+    public void Setup(Vector3 end)
     {
-        m_StartY = transform.position.y;
-        m_EndY = endY;
+        m_Start = transform.position;
+        m_End = end;
         DamageComponent damageComponent = GetComponent<DamageComponent>();
         if (damageComponent != null)
         {
             damageComponent.enabled = false;
+        }
+        BoxCollider[] colliders = GetComponentsInChildren<BoxCollider>();
+        foreach (BoxCollider collider in colliders)
+        {
+            collider.enabled = false;
         }
     }
     
@@ -94,15 +93,17 @@ public class Mob : MonoBehaviour
         Rigidbody rigidbody = GetComponent<Rigidbody>();
         if (rigidbody != null)
         {
-            Vector3 start = new Vector3(transform.position.x, m_StartY, transform.position.z);
-            Vector3 end = start;
-            end.y = m_EndY;
-            rigidbody.MovePosition(Vector3.Lerp(end, start, m_SpawnTimer / SpawnTime));
+            rigidbody.MovePosition(Vector3.Lerp(m_End, m_Start, m_SpawnTimer / SpawnTime));
         }
 
         if (m_SpawnTimer < 0)
         {
             m_State = State.Moving;
+            transform.position = m_End;
+            if (rigidbody != null)
+            {
+                rigidbody.position = m_End;
+            }
             PathComponent pathComponent = GetComponent<PathComponent>();
             if (pathComponent != null)
             {
@@ -112,6 +113,11 @@ public class Mob : MonoBehaviour
             if (damageComponent != null)
             {
                 damageComponent.enabled = true;
+            }
+            BoxCollider[] colliders = GetComponentsInChildren<BoxCollider>();
+            foreach (BoxCollider collider in colliders)
+            {
+                collider.enabled = true;
             }
         }
     }
@@ -126,6 +132,12 @@ public class Mob : MonoBehaviour
             Quaternion quaternion = m_Graphics.rotation;
             quaternion.eulerAngles = new Vector3(quaternion.eulerAngles.x, quaternion.eulerAngles.y, sin);
             m_Graphics.rotation = quaternion;
+        }
+
+        DamageComponent damageComponent = GetComponent<DamageComponent>();
+        if (damageComponent != null)
+        {
+            damageComponent.enabled = true;
         }
 
         if (facingTower != null)
@@ -211,6 +223,7 @@ public class Mob : MonoBehaviour
     public float SpawnTime = 1.5f;
 
     public Lane Lane { get; set; }
+    public bool IsSpawning { get { return m_State == State.Spawning; } }
 
     private enum State
     {
@@ -225,6 +238,6 @@ public class Mob : MonoBehaviour
     private State m_State;
     private float m_AttackTimer;
     private bool m_IsDone;
-    private float m_StartY;
-    private float m_EndY;
+    private Vector3 m_Start;
+    private Vector3 m_End;
 }

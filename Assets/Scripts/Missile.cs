@@ -55,7 +55,11 @@ public class Missile : MonoBehaviour
 
         if (damageComponent != null)
         {
-            damageComponent.TakeDamage(Damage, gameObject, DamageType);
+            Mob mob = collider.GetComponent<Mob>();
+            if (mob == null || !mob.IsSpawning)
+            {
+                damageComponent.TakeDamage(Damage, gameObject, DamageType);
+            }
         }
 
         m_CurrentPiercingCount--;
