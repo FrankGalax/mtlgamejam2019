@@ -1,47 +1,15 @@
 fileFormatVersion: 2
-guid: 10dc2aa76d4beda45b635da5c598deb1
+guid: 87ecfb03458ec2847939b67aeeffd11d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Box001
-    100004: CardBoard
-    100006: CardBoardTraps
-    100008: LanTile
-    100010: LanTile001
-    100012: ProjectileBox
     400000: //RootNode
-    400002: Box001
-    400004: CardBoard
-    400006: CardBoardTraps
-    400008: LanTile
-    400010: LanTile001
-    400012: ProjectileBox
-    2100000: WoodenStick
-    2100002: 'Material #36'
-    2100004: 'Material #37'
-    2100006: 03 - Default
-    2100008: 'Material #50'
+    2100000: 'Material #36'
+    2100002: 'Material #37'
     2300000: //RootNode
-    2300002: Box001
-    2300004: CardBoard
-    2300006: CardBoardTraps
-    2300008: LanTile
-    2300010: LanTile001
-    2300012: ProjectileBox
     3300000: //RootNode
-    3300002: Box001
-    3300004: CardBoard
-    3300006: CardBoardTraps
-    3300008: LanTile
-    3300010: LanTile001
-    3300012: ProjectileBox
-    4300000: Box001
-    4300002: CardBoard
-    4300004: LanTile
-    4300006: LanTile001
-    4300008: ProjectileBox
-    4300010: CardBoardTraps
+    4300000: CardBoardTraps
   externalObjects: {}
   materials:
     importMaterials: 1
