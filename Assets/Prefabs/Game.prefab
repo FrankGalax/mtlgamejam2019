@@ -85,6 +85,42 @@ MonoBehaviour:
   BasicMob: {fileID: 7006753684621473286, guid: 8852ba317d388414d9748ef21e047be7,
     type: 3}
   MobSpawnTime: 2
+  WaveDatas:
+  - TimeLimit: 1
+    SpawnTime: 5
+    Mob1Chance: 0.8
+    Mob2Chance: 0.1
+    Mob3Chance: 0.1
+    MinWolfTime: 20
+    MaxWolfTime: 40
+  - TimeLimit: 2
+    SpawnTime: 4
+    Mob1Chance: 0.6
+    Mob2Chance: 0.2
+    Mob3Chance: 0.2
+    MinWolfTime: 15
+    MaxWolfTime: 30
+  - TimeLimit: 3
+    SpawnTime: 3
+    Mob1Chance: 0.5
+    Mob2Chance: 0.25
+    Mob3Chance: 0.25
+    MinWolfTime: 15
+    MaxWolfTime: 20
+  - TimeLimit: 4
+    SpawnTime: 2
+    Mob1Chance: 0.3
+    Mob2Chance: 0.3
+    Mob3Chance: 0.3
+    MinWolfTime: 10
+    MaxWolfTime: 20
+  - TimeLimit: 1000
+    SpawnTime: 1
+    Mob1Chance: 0
+    Mob2Chance: 0.5
+    Mob3Chance: 0.5
+    MinWolfTime: 10
+    MaxWolfTime: 15
 --- !u!114 &1625177183
 MonoBehaviour:
   m_ObjectHideFlags: 0

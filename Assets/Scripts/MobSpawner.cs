@@ -2,6 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System;
+
+[Serializable]
+public struct WaveData
+{
+    public float TimeLimit;
+    public float SpawnTime;
+    public float Mob1Chance;
+    public float Mob2Chance;
+    public float Mob3Chance;
+    public float MinWolfTime;
+    public float MaxWolfTime;
+}
 
 public class MobSpawner : MonoBehaviour
 {
@@ -33,6 +46,7 @@ public class MobSpawner : MonoBehaviour
 
     public GameObject BasicMob;
     public float MobSpawnTime;
+    public List<WaveData> WaveDatas;
 
     private List<Lane> m_Lanes;
     private float m_Timer;
